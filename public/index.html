@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login y registro</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Crear Cuenta</h1>
+                <br>
+                <input type="text" placeholder="Usuario">
+                <input type="email" placeholder="Correo Electrónico">
+                <input type="password" placeholder="Contraseña">
+                <button>Registrarse</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Ingresar</h1>
+                <br>
+                <input type="email" placeholder="Correo Electrónico">
+                <input type="password" placeholder="Contraseña">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button>Ingresar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <img src="imagenes/logo-renca.png" width="150">
+                    <h1>¡Registrate en Currículum Renca!</h1>
+                    <p>¿Ya tienes una cuenta?</p>
+                    <button class="hidden" id="login">Ingresa a tu cuenta</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="imagenes/logo-renca.png" width="150">
+                    <h1>¡Bienvenido a Currículum Renca!</h1>
+                    <p>Si no estas registrado puedes hacerlo aquí</p>
+                    <button class="hidden" id="register">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
