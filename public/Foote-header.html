@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<body>
 <header class="header--featured row mt-4 mb-1 mx-4 d-none d-md-flex">
     <div class="col-4 col-lg-6">
         <div class="row">
@@ -86,27 +87,144 @@
         </div>
 </header>
 
-
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="imagenes/banner.png" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="imagenes/jujutsu_md7q.1280.webp" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
-        </div>
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg" style="background-color: #CEFF24">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Ruta de aprendizaje</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">NOTICIAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BLOG</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              OTROS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+         
+        </ul>
+        <form class="d-flex" role="search">
+            <a href="index.html">
+                <button class="btn btn-outline-success" type="button">REGISTRATE/INGRESA</button>
+            </a>
+        </form>
+      </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+  </nav>
+
+<!-- carrusel  -->
+<div id="carouselExampleIndicators" class="carousel slide" style="width: 100%;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://pbs.twimg.com/media/FxyVouEXwAE-_Lc.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/311/original/Frame_23.png?1637690965" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  
+
+<!-- cursos -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 14rem;">
+                <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
+                    class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repite este bloque para las otras 5 tarjetas -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 14rem;">
+                <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
+                    class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin del bloque repetido -->
+                <!-- Repite este bloque para las otras 5 tarjetas -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 14rem;">
+                        <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
+                            class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                        <!-- Repite este bloque para las otras 5 tarjetas -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 14rem;">
+                <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
+                    class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+                <!-- Repite este bloque para las otras 5 tarjetas -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 14rem;">
+                        <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
+                            class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
 </div>
 
 
@@ -119,8 +237,7 @@
 
 
 
-
-<div class="row" style="width: 100%; margin-left: 0 margin-down: 0">
+<div class="row" style="width: 100%; margin-left: 0 margin-down">;
     <div class="col-2" style="height: 8px; background-color: #d75e24;"></div>
     <div class="col-2" style="height: 8px; background-color: #e68e0c;"></div>
     <div class="col-2" style="height: 8px; background-color: #769e33;"></div>
@@ -135,7 +252,7 @@
     <div class="footer">
         <div class="row mx-4 mt-4 pl-md-4">
             <div class="col-sm-6 col-md-3 footer-borde1">
-                <img border="0" alt="Tag" src="imagenes/logo-renca.png"
+                <img borde="0" alt="Tag" src="imagenes/logo-renca.png"
                     style="margin-left: auto; margin-right: auto; max-width: 200px;" width="80%">
                 <br></br>
                 <div class="row">
@@ -301,10 +418,6 @@
             </div>
 </footer>
 
-
-
-
-<body>
 
 </body>
 <script src="carrusel.js"></script>
