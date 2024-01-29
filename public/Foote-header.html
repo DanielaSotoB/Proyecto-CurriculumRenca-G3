@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagina principal</title>
 </head>
 <body>
 <header class="header--featured row mt-4 mb-1 mx-4 d-none d-md-flex">
@@ -97,7 +97,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">NOTICIAS</a>
+            <a class="nav-link active" aria-current="page" href="#">CURSOS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">BLOG</a>
@@ -124,300 +124,143 @@
     </div>
   </nav>
 
-<!-- carrusel  -->
-<div id="carouselExampleIndicators" class="carousel slide" style="width: 100%;">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://pbs.twimg.com/media/FxyVouEXwAE-_Lc.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/311/original/Frame_23.png?1637690965" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+     <!--========================================================== -->
+                        <!-- SLIDER DE IMAGENES-->
+    <!--========================================================== -->
+   
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671" class="d-block w-100" alt="">
+          </div>
+          
+ 
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://pbs.twimg.com/media/FxyVouEXwAE-_Lc.jpg" class="d-block w-100" alt="...">
+          </div>
+ 
 
-  
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/311/original/Frame_23.png?1637690965" class="d-block w-100" alt="...">
+          </div>
+ 
+ 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>    
+    
+    <!--========================================================== -->
+                        <!-- INTRODUCCION DE SERVICIOS-->
+    <!--========================================================== -->
 
-<!-- cursos -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 14rem;">
-                <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
-                    class="card-img-top" alt="">
+
+    <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto" id="intro">
+        <h1 class="p-3 fs-2 border-top border-3">Renca Educa: Descubre y Desarrolla tus Habilidades con Nuestra Plataforma de <span class="text-primary">Cursos de Aprendizaje<span/></h1>
+         <p class="p-3  fs-4">
+             <span class="text-primary">Currículum Renca</span> 
+             es la página que ofrece cursos educativos para la comunidad, gestionados por la Municipalidad de Renca.     
+         </p>   
+        </section>      
+
+    <!--========================================================== -->
+                        <!-- TARJETAS-->
+    <!--========================================================== -->
+<div class="container py-4">
+    <div class="row row-cols-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="https://edteam-media.s3.amazonaws.com/specialities/original/435ca535-2522-4c30-9764-f35e9e4e3ae0.png">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h1 class="h5 card-title">Curso Básico PYTHON</h1>
+                    <p class="card-text">Duración: 10 horas</p>
+                    <a href="info.html" class="btn btn-primary">Ir al curso</a>
                 </div>
             </div>
         </div>
-
-        <!-- Repite este bloque para las otras 5 tarjetas -->
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 14rem;">
-                <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
-                    class="card-img-top" alt="">
+        <!-- TARJETA 2 -->
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="https://edteam-media.s3.amazonaws.com/courses/original/a1a1984b-d7c7-4fdd-b176-6647819d3d2e.png">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h1 class="h5 card-title">Curso Básico Scratch</h1>
+                    <p class="card-text">Duración: 3 horas</p>
+                    <a href="#" class="btn btn-primary">Ir al curso</a>
                 </div>
             </div>
+        </div>
+               <!-- TARJETA 3 -->
+               <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="https://edteam-media.s3.amazonaws.com/courses/original/1bada4e8-4bab-4be8-8f2e-83e285515187.png">
+                    <div class="card-body">
+                        <h1 class="h5 card-title">Curso Básico Arduino</h1>
+                        <p class="card-text">Duración: 5 horas</p>
+                        <a href="#" class="btn btn-primary">Ir al curso</a>
+                    </div>
+                </div>
+            </div>
+                    <!-- TARJETA 4 -->
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="https://edteam-media.s3.amazonaws.com/courses/big/152be9d3-4704-4639-b399-203a76a286c5.jpg">
+                <div class="card-body">
+                    <h1 class="h5 card-title">Curso Básico Java</h1>
+                    <p class="card-text">Duración: 7 horas</p>
+                    <a href="#" class="btn btn-primary">Ir al curso</a>
+                </div>
+            </div>
+        </div>
+                <!-- TARJETA 5 -->
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="https://edteam-media.s3.amazonaws.com/courses/original/506ead68-9257-44c7-8ff8-2d0c320b99dd.jpg">
+                        <div class="card-body">
+                            <h1 class="h5 card-title">Curso Básico Excel</h1>
+                            <p class="card-text">Duración: 7 horas</p>
+                            <a href="#" class="btn btn-primary">Ir al curso</a>
+                        </div>
+                    </div>
+                </div>
+                        <!-- TARJETA 6 -->
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_FeHat2EE3hkIvYfCpL9-IHyB9fluBCmxw&usqp=CAU">
+                <div class="card-body">
+                    <h1 class="h5 card-title">Curso Básico AWS</h1>
+                    <p class="card-text">Duración: 7 horas</p>
+                    <a href="#" class="btn btn-primary">Ir al curso</a>
+                </div>
+            </div>
+        </div>
         </div>
         <!-- Fin del bloque repetido -->
-                <!-- Repite este bloque para las otras 5 tarjetas -->
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="width: 14rem;">
-                        <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
-                            class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                        <!-- Repite este bloque para las otras 5 tarjetas -->
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 14rem;">
-                <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
-                    class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-                <!-- Repite este bloque para las otras 5 tarjetas -->
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="width: 14rem;">
-                        <img src="https://cursando.cl/wp-content/uploads/2019/01/cursos-sence-gratuitos.jpg"
-                            class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
     </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 <div class="row" style="width: 100%; margin-left: 0 margin-down">;
-    <div class="col-2" style="height: 8px; background-color: #d75e24;"></div>
-    <div class="col-2" style="height: 8px; background-color: #e68e0c;"></div>
-    <div class="col-2" style="height: 8px; background-color: #769e33;"></div>
-    <div class="col-2" style="height: 8px; background-color: #009a88;"></div>
-    <div class="col-2" style="height: 8px; background-color: #5fb9d3;"></div>
-    <div class="col-2" style="height: 8px; background-color: #0192d0;"></div>
+    <div class="col-2" style="height: 15px; background-color: #d75e24;"></div>
+    <div class="col-2" style="height: 15px; background-color: #e68e0c;"></div>
+    <div class="col-2" style="height: 15px; background-color: #769e33;"></div>
+    <div class="col-2" style="height: 15px; background-color: #009a88;"></div>
+    <div class="col-2" style="height: 15px; background-color: #5fb9d3;"></div>
+    <div class="col-2" style="height: 15px; background-color: #0192d0;"></div>
 </div>
 
-
-<footer id="piedePagina" class="site-footer" role="contentinfo"
-    style="background-color: black; background-size: contain; background-repeat: no-repeat; background-position: bottom right;">
-    <div class="footer">
-        <div class="row mx-4 mt-4 pl-md-4">
-            <div class="col-sm-6 col-md-3 footer-borde1">
-                <img borde="0" alt="Tag" src="imagenes/logo-renca.png"
-                    style="margin-left: auto; margin-right: auto; max-width: 200px;" width="80%">
-                <br></br>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="color= text-light">
-                            <img src="imagenes/gpsssss-removebg-preview.png" width="20px">
-                            Blanco Encalada Nº 1335, Plaza de Renca, Renca.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 ">
-                        <p class="color= text-light">
-                            <img src="imagenes/Telefono.png" width="20px">
-                            +56 2 2685 6600
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 ">
-                        <p class="color= text-light">
-                            <img src="imagenes/Correi-sinfondo.png" width="20px">
-                            contacto@renca.cl
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 ">
-                        <p class="color= text-light">
-                            <img src="imagenes/Telefono.png" width="20px">
-                            Atención Social Teléfonica:
-                        </p>
-                        <p class="color= text-light">
-                            +56 2 3241 1999, de lunes a viernes de 08:30 a 14:00 horas 15:00 a 17:00
-                            horas.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-6  col-md-3 footer-borde1 color= text-light">
-                <b>· MUNICIPALIDAD</b>
-                <br>
-                <div class="row">
-                    <div class="col-10" style="">
-                        <p class="color= text-light">Alcalde</p>
-                        <!--esto es un enlace en la pagina oficial-->
-                        <br>
-                        <p class="color= text-light">Autoridades Comunales</p>
-                        <br>
-                        <p class="color= text-light">Políticas de Privacidad</p>
-                        <br>
-                    </div>
-                </div>
-                <b>· TRÁMITES EN LÍNEA</b>
-                <br>
-                <div class="row">
-                    <div class="col-10" style="">
-                        <p class="color= text-light">Tag</p>
-                        <br>
-                        <p class="color= text-light">Permiso de Circulación</p>
-                        <br>
-                        <p class="color= text-light">Tarifa de Aseo</p>
-                        <br>
-                        <p class="color= text-light">Patentes</p>
-                        <br>
-                        <p class="color= text-light">Multas</p>
-                        <br>
-                        <p class="color= text-light">Esterilización Perros y
-                            Gatos</p>
-                        <br>
-                        <p class="color= text-light">Sigue tu Camión</p>
-                        <br>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <br>
-            <div class="col-sm-6  col-md-3 footer-borde2 pb-3">
-                <b>
-                    <p class="color= text-light">· UNIDADES MUNICIPALES</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· CORPORACIÓN MUNICIPAL</p>
-                </b>
-                <br>
-
-                <b>
-                    <p class="color= text-light">· RENCA LIMPIA</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· EDUCACIÓN</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· SALUD</p>
-                </b>
-                <br>
-
-                <b>
-                    <p class="color= text-light">· CULTURA</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· DEPORTES</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· NOTICIAS</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· TRABAJA CON
-                        NOSOTROS</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">PAGO A PROVEEDORES</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· INTRANET MUNICIPAL</p>
-                </b>
-                <br>
-                <b>
-                    <p class="color= text-light">· CONTRATE RENQUINAS Y
-                        RENQUINOS</p>
-                </b>
-                <br>
-
-            </div>
-
-            <div class="col-sm-6  col-md-3 footer-borde3 color= text-light">
-                <b>· REDES SOCIALES</b>
-                <br>
-                <br>
-                <h4>
-                    <a style="color:black;" class="px-1" href="https://www.facebook.com/MuniRenca/" target="_blank">
-                        <img src="imagenes/ddd-removebg-preview.png" width="25px">
-                    </a>
-                    <a style="color:black;" class="px-1" href="https://twitter.com/Muni_Renca" target="_blank">
-                        <img src="imagenes/twitter.png" width="25px">
-                    </a>
-                    <a style="color:black;" class="px-1" href="https://www.instagram.com/muni_renca/" target="_blank">
-                        <img src="imagenes/instagram-removebg-preview.png" width="25px">
-                    </a>
-                    <a style="color:black;" class="px-1" href="https://www.flickr.com/photos/153772620@N02"
-                        target="_blank">
-                        <img src="imagenes/flickr.png" width="25px">
-                    </a>
-                    <a style="color:black;" class="px-1" href="https://www.youtube.com/channel/UCosdtBKfRSxhhi4x9247Nbw"
-                        target="_blank">
-                        <img src="imagenes/you.png" width="25px">
-
-                    </a>
-                </h4>
-
-
-            </div>
-</footer>
-
+<footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap">
+    <p class="fs-5 px-3  pt-3">Currículum Renca. &copy; Todos Los Derechos Reservados 2024</p>
+    <div id="iconos" >
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>  
+    </div>
 
 </body>
 <script src="carrusel.js"></script>
