@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  transition: background-color 0.5s ease;
+}
+
+.sidebar {
+  background: linear-gradient(to bottom, #ceff24, #8dff24); /* Degradado de verde */
+  color: #253746;
+  height: 100vh;
+  padding-top: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.sidebar-heading {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.5rem;
+  color: #253746;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  color: #253746 !important;
+  margin: 0;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.list-group-item:hover {
+  background-color: #1a9e3e; /* Verde más oscuro al hacer hover */
+  color: #fff !important;
+}
+
+/* ... (resto del código sigue igual) */
+
