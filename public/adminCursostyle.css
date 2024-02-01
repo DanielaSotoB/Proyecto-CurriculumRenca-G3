@@ -1,0 +1,8 @@
+.list-group-item-success {
+    background-color: #769e33; /* Verde de Bootstrap */
+    color: rgb(254, 252, 252); /* Color de texto blanco */
+}
+#contenedor{
+    text-align: left;
+    margin-top: 20px;
+}
