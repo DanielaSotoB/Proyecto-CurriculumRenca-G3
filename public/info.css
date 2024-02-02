@@ -1,0 +1,120 @@
+body {
+    background-color: #f8f9fa !important;
+}
+
+.card {
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ced4da;
+}
+
+.card-body {
+    padding: 20px;
+ 
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+body {
+    background-color: #f8f9fa !important;
+}
+
+.card {
+    border: 1px solid #ced4da;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+ 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-subtitle {
+    color: #6c757d;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #495057;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.list-unstyled li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list-unstyled li i {
+    margin-right: 5px;
+    color: #28a745;
+}
+
+.list-inline {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.list-inline-item {
+    margin-right: 5px;
+}
+
+.list-inline-item svg {
+    color: #ffc107;
+}
+
+#card-body1{
+    margin-top: 80px;
+}
+
+.tarjeta {
+    border: none; /* Esto elimina el borde */
+    padding: 20px; /* Añade un relleno opcional para separar el contenido del borde invisible */
+  }
