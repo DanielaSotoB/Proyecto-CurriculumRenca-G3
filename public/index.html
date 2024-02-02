@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="loginAcces.js"></script>
     <title>Login y registro</title>
 </head>
 
@@ -26,10 +27,10 @@
             <form>
                 <h1>Ingresar</h1>
                 <br>
-                <input type="email" placeholder="Correo Electrónico">
-                <input type="password" placeholder="Contraseña">
+                <input type="text" placeholder="Correo Electrónico" id="email">
+                <input type="text" placeholder="Contraseña" id="password">
                 <a href="#">¿Olvidaste tu contraseña?</a>
-                <button>Ingresar</button>
+                <input type="button" value="ingresar" onclick="loguear()">
             </form>
         </div>
         <div class="toggle-container">
@@ -50,7 +51,12 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+    <script src="script.js"></script>
+
+=======
     <script src="login.js"></script>
+>>>>>>> 2c0c9dabf1b0a4b07085eece5d084773d073ceed
 </body>
 
 </html>
