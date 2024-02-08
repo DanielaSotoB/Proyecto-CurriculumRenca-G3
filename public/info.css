@@ -118,3 +118,13 @@ body {
     border: none; /* Esto elimina el borde */
     padding: 20px; /* Añade un relleno opcional para separar el contenido del borde invisible */
   }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .black-text {
+    color: black;
+  }
