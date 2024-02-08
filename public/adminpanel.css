@@ -37,3 +37,6 @@ body {
   background-color: #1a9e3e; /* Verde más oscuro al hacer hover */
   color: #fff !important;
 }
+#nav1{
+  background: linear-gradient(to right, #Ff571e, #CEFF24,#0ab5fd); ;
+}

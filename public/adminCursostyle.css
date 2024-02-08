@@ -5,4 +5,18 @@
 #contenedor{
     text-align: left;
     margin-top: 20px;
+    
+   
+}
+ #nav2{
+    background: linear-gradient(to right, #Ff571e, #CEFF24,#0ab5fd);
+}
+
+
+
+div #barra{
+    margin-top: 60px;
+}
+div #border{
+    border:black;
 }

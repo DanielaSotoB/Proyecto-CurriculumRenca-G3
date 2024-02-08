@@ -1,6 +1,7 @@
 body {
 
     height: 100vh;
+    
 }
 
 
@@ -72,4 +73,7 @@ body {
 .checkbox:checked::after {
     background: #f8f8f8;
 
+}
+#nav1{
+    background:linear-gradient(to right, #Ff571e, #CEFF24,#0ab5fd); 
 }
