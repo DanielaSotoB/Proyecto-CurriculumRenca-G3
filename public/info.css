@@ -119,6 +119,15 @@ body {
     padding: 20px; /* Añade un relleno opcional para separar el contenido del borde invisible */
   }
 
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .black-text {
+    color: black;
+  }
 #nav1{
     background: linear-gradient(to right, #Ff571e, #CEFF24,#0ab5fd); ;
 }
