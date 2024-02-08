@@ -128,3 +128,6 @@ body {
   .black-text {
     color: black;
   }
+#nav1{
+    background: linear-gradient(to right, #Ff571e, #CEFF24,#0ab5fd); ;
+}
