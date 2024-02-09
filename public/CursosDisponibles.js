@@ -2,51 +2,45 @@
 const courses = [
     { 
         title: "Curso Básico PYTHON", 
-        category: "desarrollo-web", 
+        category: "Lenguajes-de-programación", 
         description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
     },
-    { 
+    {
         title: "Curso Básico Scratch", 
+        category: "desarrollo-web", 
+        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
+        image: "https://edteam-media.s3.amazonaws.com/courses/original/a1a1984b-d7c7-4fdd-b176-6647819d3d2e.png" // Agrega la URL de la imagen para el curso de Python
+    },
+    { 
+        title: "Curso Básico Arduino", 
+        category: "desarrollo-web", 
+        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
+        image: "https://edteam-media.s3.amazonaws.com/courses/original/1bada4e8-4bab-4be8-8f2e-83e285515187.png" // Agrega la URL de la imagen para el curso de Python
+    },
+    { 
+        title: "Curso Básico Excel", 
         category: "python", 
-        description: "Introducción al lenguaje de programación Python desde cero, sin conocimientos previos necesarios.",
-        image: "https://edteam-media.s3.amazonaws.com/courses/original/a1a1984b-d7c7-4fdd-b176-6647819d3d2e.png" // Agrega la URL de la imagen para el curso de Scratch
+        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
+        image: "https://edteam-media.s3.amazonaws.com/courses/original/506ead68-9257-44c7-8ff8-2d0c320b99dd.jpg" // Agrega la URL de la imagen para el curso de Python
     },
     { 
-        title: "Curso Básico PYTHON", 
+        title: "Curso Básico AWS", 
         category: "desarrollo-web", 
         description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_FeHat2EE3hkIvYfCpL9-IHyB9fluBCmxw&usqp=CAU" // Agrega la URL de la imagen para el curso de Python
     },
     { 
-        title: "Curso Básico PYTHON", 
-        category: "desarrollo-web", 
+        title: "Curso Básico Java", 
+        category: "Lenguajes-de-programación", 
         description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
+        image: "https://edteam-media.s3.amazonaws.com/courses/big/152be9d3-4704-4639-b399-203a76a286c5.jpg" // Agrega la URL de la imagen para el curso de Python
     },
     { 
-        title: "Curso Básico PYTHON", 
-        category: "desarrollo-web", 
+        title: "Curso Inglés Básico", 
+        category: "Idiomas", 
         description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
-    },
-    { 
-        title: "Curso Básico PYTHON", 
-        category: "desarrollo-web", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
-    },
-    { 
-        title: "Curso Básico PYTHON", 
-        category: "desarrollo-web", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
-    },
-    { 
-        title: "Curso Básico PYTHON", 
-        category: "desarrollo-web", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s" // Agrega la URL de la imagen para el curso de Python
+        image: "https://www.acritica.com/image/policy:1.308771.1687463101:1687463101/image.jpg?f=default&w=1200" // Agrega la URL de la imagen para el curso de Python
     },
     
 ];
