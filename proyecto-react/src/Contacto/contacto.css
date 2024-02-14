@@ -40,6 +40,6 @@ input, textarea {
 
 .form2{
     width: 50%;
-    justify-content: center;
-    position: relative;
+    text-align: center;
+    margin: 0 auto;
 }
