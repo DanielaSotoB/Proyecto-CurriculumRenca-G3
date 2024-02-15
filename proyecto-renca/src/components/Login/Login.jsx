@@ -1,8 +1,8 @@
-import React from 'react';
-import './LoginRegistro.css'
+
+
 const Login = () => {
   const loguear = () => {
-    // Función para iniciar sesión
+
   };
 
   return (
