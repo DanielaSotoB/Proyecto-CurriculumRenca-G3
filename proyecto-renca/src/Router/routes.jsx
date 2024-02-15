@@ -5,7 +5,7 @@ import InformacionCursos from "../Views/InformacionCursos";
 import CursosDisponibles from "../Views/CursosDisponibles";
 import PreguntasFrecuentes from "../Views/PreguntasFrecuentes";
 import LoginRegistro from "../Views/LoginRegistro";
-import Contacto from "../Views/Contacto"; // Asegúrate de poner la ruta correcta
+import Contacto from "../Views/Contacto";
 
 const router = createBrowserRouter([
   { path: "/", element: <RutaAprendizaje/>},
