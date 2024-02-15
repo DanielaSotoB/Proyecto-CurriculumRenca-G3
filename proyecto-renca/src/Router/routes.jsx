@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   { path: "/InformacionCursos", element: <InformacionCursos /> },
   { path: "/PreguntasFrecuentes", element: <PreguntasFrecuentes /> },
   { path: "/LoginRegistro", element: <LoginRegistro/> },
+
 ]);
 
 export default router;

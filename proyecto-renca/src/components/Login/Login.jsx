@@ -1,7 +1,8 @@
-import React from 'react';
+
+
 const Login = () => {
   const loguear = () => {
-    // Función para iniciar sesión
+
   };
 
   return (
