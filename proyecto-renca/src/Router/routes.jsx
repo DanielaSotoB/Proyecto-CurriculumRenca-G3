@@ -5,6 +5,7 @@ import InformacionCursos from "../Views/InformacionCursos";
 import CursosDisponibles from "../Views/CursosDisponibles";
 import PreguntasFrecuentes from "../Views/PreguntasFrecuentes";
 import LoginRegistro from "../Views/LoginRegistro";
+import Contacto from "../Views/Contacto"; // Asegúrate de poner la ruta correcta
 
 const router = createBrowserRouter([
   { path: "/", element: <RutaAprendizaje/>},
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
   { path: "/InformacionCursos", element: <InformacionCursos /> },
   { path: "/PreguntasFrecuentes", element: <PreguntasFrecuentes /> },
   { path: "/LoginRegistro", element: <LoginRegistro/> },
+  { path: "/Contacto", element: <Contacto /> },
 
 ]);
 
