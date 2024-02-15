@@ -70,10 +70,10 @@ const Navbar = () => {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              <a target="_blank" href="/proyecto-react/src/Login/index.html">
+              <a target="_blank" href="/LoginRegistro">
                 <button className="btn bi-hand-thumbs-up" type="button">INGRESAR</button>
               </a>
-              <a target="_blank" href="/proyecto-react/src/Login/">
+              <a target="_blank" href="/LoginRegistro">
                 <button className="btn btn-outline-success ml-4" type="button">REGISTRARSE</button>
               </a>
             </form>
