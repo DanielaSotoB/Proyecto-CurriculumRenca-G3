@@ -100,71 +100,101 @@
     <!--            NAVBAR TEXTO CURSO          -->
     <!-- ===========================================-->
 
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Agregar Curso </span>
+    <nav  class="navbar bg-body-tertiary">
+        <div id="nav3" class="container-fluid">
+          <h2> Agregar Curso </h2>
         </div>
       </nav>
 
     <!-- =================================== =======-->
     <!--            INGRESO DE CURSO ADMIN          -->
     <!-- ===========================================-->
-    <div id="contenedor" class="container-fluid">
-        <div class="container text-center">
 
-            <div class="input-group mb-3" >
-                <span class="input-group-text" id="basic-addon1">Nombre de Curso</span>
-                <input type="text" class="form-control" placeholder="" aria-label="CourseName"
-                    aria-describedby="basic-addon1" required>
+
+    <div id="contenedor" >
+    
+
+<div class="div-1">
+    <h4>Informacion Del Curso</h4>
+    <div class="input-group mb-3" >
+        <span class="input-group-text" id="basic-addon1">Nombre de Curso</span>
+        <input type="text" class="form-control" placeholder="" aria-label="CourseName"
+            aria-describedby="basic-addon1" required>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Categoria</option>
+            <option>Programacion</option>
+            <option>Idioma</option>
+            <option>Oficce</option>
+        </select>
+
+    </div>
+    </form>
+   <!--<form class="was-validated">-->
+        <div id="border" class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">Creador del Curso</span>
+                <input type="text" class="form-control" id="basic-url"
+                    aria-describedby="basic-addon3 basic-addon4" required>
             </div>
+        </div>
 
-            <div class="mb-3">
-                <select class="form-select" id="validationTooltip04" required>
-                    <option selected disabled value="">Categoria</option>
-                    <option>Programacion</option>
-                    <option>Idioma</option>
-                    <option>Oficce</option>
-                </select>
+        <div id="border" class="input-group mb-3">
+            <span class="input-group-text">Capacidad</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" required>
+        </div>
 
+        <div id="border" class="input-group mb-3">
+            <span class="input-group-text">Codigo del Curso</span>
+            <input type="text" class="form-control" placeholder="" aria-label="CodigoCurso" required>
+        </div>
+
+        <div id="border" class="mb-3">
+            <textarea class="form-control" id="validationTextarea" placeholder="Escribe una descripcion."
+                required></textarea>
+            <div class="invalid-feedback">
+                Por favor ingresa una descripcion.
             </div>
-            </form>
-            <form class="was-validated">
-                <div id="border" class="mb-3">
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon3">Creador del Curso</span>
-                        <input type="text" class="form-control" id="basic-url"
-                            aria-describedby="basic-addon3 basic-addon4" required>
-                    </div>
-                </div>
+        </div>
 
-                <div id="border" class="input-group mb-3">
-                    <span class="input-group-text">Capacidad</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" required>
-                </div>
-
-                <div id="border" class="mb-3">
-                    <span class="input-group-text">Codigo del Curso</span>
-                    <input type="text" class="form-control" placeholder="" aria-label="CodigoCurso" required>
-                </div>
-
+        
+    </form>
+</div>
+<!--<form class=" was-validated"> ---> 
+            <div class="div-2">
+<h4>Cargar Archivos del Curso</h4>
                 <div id="border" class="mb-3">
                     <input type="file" class="form-control" aria-label="file example" required>
-                    <div class="invalid-feedback">Ingresar Archivo</div>
+                    <div class="invalid-feedback">Ingresar Portada</div>
                 </div>
                 <div id="border" class="mb-3">
-                    <textarea class="form-control" id="validationTextarea" placeholder="Escribe una descripcion."
-                        required></textarea>
-                    <div class="invalid-feedback">
-                        Por favor ingresa una descripcion.
-                    </div>
+                    <input type="file" class="form-control" aria-label="file example" required>
+                    <div class="invalid-feedback">Ingresar Contenido Curso</div>
                 </div>
-
-                <div class="col-12">
+                <div id="border" class="mb-3">
+                    <input type="file" class="form-control" aria-label="file example" required>
+                    <div class="invalid-feedback">Ingresar Contenido Curso</div>
+                </div>
+                <div id="border" class="mb-3">
+                    <input type="file" class="form-control" aria-label="file example" required>
+                    <div class="invalid-feedback">Ingresar Contenido Curso</div>
+                </div>
+                <div id="border" class="mb-3">
+                    <input type="file" class="form-control" aria-label="file example" required>
+                    <div class="invalid-feedback">Ingresar Contenido Curso</div>
+                </div>
+                <div id="boton" class="col-12">
                     <button class="btn btn-primary" type="submit">Guardar</button>
                 </div>
-        </div>
+                
+            </div>
         </form>
-    </div>
+              
+        </div>
+        
+   
     
     <!--========================================================== -->
                         <!-- LINEAS DE COLORES-->
