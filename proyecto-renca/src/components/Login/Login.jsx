@@ -6,8 +6,8 @@ const Login = () => {
   };
 
   return (
-    <div className="container" id="container">
-      <div className="form-container sign-up">
+    <div className="loginRegistro" id="loginRegistro">
+      <div className="form-loginRegistro sign-up">
         <form>
           <h1>Crear Cuenta</h1>
           <br />
@@ -17,7 +17,7 @@ const Login = () => {
           <button>Registrarse</button>
         </form>
       </div>
-      <div className="form-container sign-in">
+      <div className="form-loginRegistro sign-in">
         <form>
           <h1>Ingresar</h1>
           <br />
@@ -27,7 +27,7 @@ const Login = () => {
           <input type="button" value="Ingresar" onClick={loguear} />
         </form>
       </div>
-      <div className="toggle-container">
+      <div className="toggle-loginRegistro">
         <div className="toggle">
           <div className="toggle-panel toggle-left">
             <img src="../img/logo-renca.png" width="150" alt="Logo Renca" />
