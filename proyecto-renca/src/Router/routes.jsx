@@ -9,7 +9,7 @@ import ContactoPag from "../Views/ContactoPag";
 
 const router = createBrowserRouter([
   { path: "/", element: <RutaAprendizaje/>},
-  { path: "/CursosDispo", element: <CursosDispo /> },
+  { path: "/CursosDispo", element: <CursosDispo/> },
   { path: "/InformacionCursos", element: <InformacionCursos /> },
   { path: "/PreguntasFrecuentes", element: <PreguntasFrecuentes /> },
   { path: "/LoginRegistro", element: <LoginRegistro/> },

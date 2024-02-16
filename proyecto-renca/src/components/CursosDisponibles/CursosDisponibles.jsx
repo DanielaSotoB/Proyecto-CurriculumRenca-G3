@@ -45,35 +45,39 @@ const courses = [
     },
 ];
 
-function CursosDisponibles () {
-    const [category, setCategory] = useState('all');
+const CursosDisponibles = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [filteredCourses, setFilteredCourses] = useState([]);
 
     useEffect(() => {
-        if (category === 'all') {
+        if (selectedCategory === 'all') {
             setFilteredCourses(courses);
         } else {
-            setFilteredCourses(courses.filter(course => course.category === category));
+            const filtered = courses.filter(course => course.category === selectedCategory);
+            setFilteredCourses(filtered);
         }
-    }, [category]);
+    }, [selectedCategory]);
+
+    const handleCategoryChange = (event) => {
+        setSelectedCategory(event.target.value);
+    };
 
     return (
         <div className="container mt-5">
             <h1 className="text-center mb-4">Cursos Disponibles</h1>
             <div className="row mb-4">
                 <div className="col-md-4">
-                    <select id="filter-category" className="form-control" value={category} onChange={(e) => setCategory(e.target.value)}>
+                    <select id="filter-category" className="form-control" value={selectedCategory} onChange={handleCategoryChange}>
                         <option value="all">Todos</option>
                         <option value="desarrollo-web">Desarrollo Web</option>
                         <option value="Lenguajes-de-programación">Lenguajes de programación</option>
                         <option value="Idiomas">Idiomas</option>
-                        {/* Agrega más opciones de categoría según sea necesario */}
                     </select>
                 </div>
             </div>
             <div id="course-list" className="row">
-                {filteredCourses.map((course, index) => (
-                    <div key={index} className="col-md-4">
+                {filteredCourses.map(course => (
+                    <div className="col-md-4" key={course.title}>
                         <div className="card course-card">
                             <img src={course.image} className="card-img-top" alt={course.title} />
                             <div className="card-body">
@@ -86,6 +90,6 @@ function CursosDisponibles () {
             </div>
         </div>
     );
-}
+};
 
 export default CursosDisponibles;
