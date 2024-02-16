@@ -1,4 +1,4 @@
-
+import './Contacto.css'
 
 const Contacto = () => {
   const handleSubmit = (event) => {
