@@ -3,14 +3,14 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Contacto from "../components/Contacto/Contacto";
 
-const Contacto = () => {
+const ContactoPag = () => {
     return (
     <>
         <Navbar />
-        <Contacto />
+        <Contacto/>
         <Footer />
     </>
     );
 }
 
-export default Contacto;
+export default ContactoPag
