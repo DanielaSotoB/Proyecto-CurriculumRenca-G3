@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -17,7 +17,7 @@ body{
     height: 100vh;
 }
 
-.container{
+.container-login{
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -28,25 +28,25 @@ body{
     min-height: 480px;
 }
 
-.container p{
+.container-login p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+.container-login span{
     font-size: 12px;
 }
 
-.container a{
+.container-login a{
     color: #333;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button{
+.container-login button{
     background-color: rgb(206, 255, 36);
     color: #080808;
     font-size: 12px;
@@ -60,12 +60,12 @@ body{
     cursor: pointer;
 }
 
-.container button.hidden{
+.container-login button.hidden{
     background-color: white;
     border-color: #fff;
 }
 
-.container form{
+.container-login form{
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -75,7 +75,7 @@ body{
     height: 100%;
 }
 
-.container input{
+.container-login input{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -207,4 +207,4 @@ body{
 
 .container.active .toggle-right{
     transform: translateX(200%);
-}
+} 

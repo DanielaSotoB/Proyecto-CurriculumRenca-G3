@@ -6,6 +6,7 @@ import CursosDispo from "../Views/CursosDispo";
 import PreguntasFrecuentes from "../Views/PreguntasFrecuentes";
 import LoginRegistro from "../Views/LoginRegistro";
 import ContactoPag from "../Views/ContactoPag";
+import AdmiPanelView from "../Views/AdmiPanelView";
 
 const router = createBrowserRouter([
   { path: "/", element: <RutaAprendizaje/>},
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   { path: "/PreguntasFrecuentes", element: <PreguntasFrecuentes /> },
   { path: "/LoginRegistro", element: <LoginRegistro/> },
   { path: "/Contactopag", element: <ContactoPag /> },
+  { path: "/AdmiPanelView", element: <AdmiPanelView/> },
 
 ]);
 

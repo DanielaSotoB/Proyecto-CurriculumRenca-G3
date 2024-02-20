@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LoginRegistro = () => {
     const loguear = () => {
         // Función de inicio de sesión
@@ -7,7 +6,7 @@ const LoginRegistro = () => {
     };
 
     return (
-        <div className="container" id="container"> 
+        <div className="container-login" id="container"> 
             <div className="form-container sign-up">
                 <form>
                     <h1>Crear Cuenta</h1>
