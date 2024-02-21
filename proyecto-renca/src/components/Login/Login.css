@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+#login-body{
     background-color: #c9d6ff;
     background: linear-gradient(to right, #Ff571e, #CEFF24, #0ab5fd);
     display: flex;
