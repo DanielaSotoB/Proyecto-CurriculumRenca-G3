@@ -6,6 +6,7 @@ import Mensaje from '../components/Principal/Mensaje'
 import Motivacional from '../components/Principal/Motivacional'
 import Tarjetas from '../components/Principal/Tarjetas'
 
+
 const RutaAprendizaje = () => {
   return (
     <>
