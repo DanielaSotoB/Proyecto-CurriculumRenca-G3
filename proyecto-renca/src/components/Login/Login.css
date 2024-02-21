@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -7,7 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .loginRegistro{
+body{
     background-color: #c9d6ff;
     background: linear-gradient(to right, #Ff571e, #CEFF24, #0ab5fd);
     display: flex;
@@ -15,9 +15,9 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-}  */
+}
 
-.loginRegistro{
+.container-login{
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -26,29 +26,27 @@
     width: 768px;
     max-width: 100%;
     min-height: 480px;
-    background-color: #c9d6ff;
-
 }
 
-.loginRegistro p{
+.container-login p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.loginRegistro span{
+.container-login span{
     font-size: 12px;
 }
 
-.loginRegistro a{
+.container-login a{
     color: #333;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.loginRegistro button{
+.container-login button{
     background-color: rgb(206, 255, 36);
     color: #080808;
     font-size: 12px;
@@ -62,12 +60,12 @@
     cursor: pointer;
 }
 
-.loginRegistro button.hidden{
+.container-login button.hidden{
     background-color: white;
     border-color: #fff;
 }
 
-.loginRegistro form{
+.container-login form{
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -77,7 +75,7 @@
     height: 100%;
 }
 
-.loginRegistro input{
+.container-login input{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -86,9 +84,9 @@
     border-radius: 8px;
     width: 100%;
     outline: none;
-} */
+}
 
-.form-loginRegistro{
+.form-container{
     position: absolute;
     top: 0;
     height: 100%;
@@ -101,7 +99,7 @@
     z-index: 2;
 }
 
-.loginRegistro.active .sign-in{
+.container.active .sign-in{
     transform: translateX(100%);
 }
 
@@ -112,7 +110,7 @@
     z-index: 1;
 }
 
-.loginRegistro.active .sign-up{
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -145,7 +143,7 @@
     height: 40px;
 }
 
-.toggle-loginRegistro{
+.toggle-container{
     position: absolute;
     top: 0;
     left: 50%;
@@ -157,7 +155,7 @@
     z-index: 1000;
 }
 
-.loginRegistro.active .toggle-loginRegistro{
+.container.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
@@ -175,7 +173,7 @@
     transition: all 0.6s ease-in-out;
 }
 
-.loginRegistro.active .toggle{
+.container.active .toggle{
     transform: translateX(50%);
 }
 
@@ -198,7 +196,7 @@
     transform: translateX(-200%);
 }
 
-.loginRegistro.active .toggle-left{
+.container.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -207,6 +205,6 @@
     transform: translateX(0);
 }
 
-.loginRegistro.active .toggle-right{
+.container.active .toggle-right{
     transform: translateX(200%);
-} */
+} 

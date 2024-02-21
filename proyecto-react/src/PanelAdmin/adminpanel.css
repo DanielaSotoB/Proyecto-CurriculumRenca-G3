@@ -6,7 +6,7 @@ body {
 }
 
 .sidebar {
-  background: linear-gradient(to bottom, #ceff24, #8dff24); /* Degradado de verde */
+  background: linear-gradient(to bottom, white, grey); /* Degradado de verde */
   color: #253746;
   height: 100vh;
   padding-top: 20px;
@@ -17,7 +17,7 @@ body {
 .sidebar-heading {
   font-family: 'Heebo', sans-serif;
   font-size: 1.5rem;
-  color: #253746;
+  color: black;
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .list-group-item:hover {
-  background-color: #1a9e3e; /* Verde más oscuro al hacer hover */
+  background-color: #0ab5fd ; /* Verde más oscuro al hacer hover */
   color: #fff !important;
 }
 #nav1{
