@@ -65,57 +65,6 @@ function MiCurso() {
                 </svg>
             </button>
 
-            <div className="container mt-4">
-                <h1 className="mb-4">Temario de Python</h1>
-
-                <div className="accordion" id="temarioAccordion">
-                    {/* Sección 1: Introducción a Python */}
-                    <div className="card">
-                        <div className="card-header" id="headingOne">
-                            <h2 className="mb-0">
-                                <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Introducción a Python
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#temarioAccordion">
-                            <div className="card-body">
-                                <ul>
-                                    <li>¿Qué es Python?</li>
-                                    <li>Historia y evolución</li>
-                                    <li>Instalación y configuración</li>
-                                    <li>Entornos de desarrollo</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Sección 2: Fundamentos de Python */}
-                    <div className="card">
-                        <div className="card-header" id="headingTwo">
-                            <h2 className="mb-0">
-                                <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Fundamentos de Python
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#temarioAccordion">
-                            <div className="card-body">
-                                <ul>
-                                    <li>Sintaxis básica</li>
-                                    <li>Tipo de datos y variables</li>
-                                    <li>Operadores</li>
-                                    <li>Estructuras de control (if, for, while)</li>
-                                    <li>Listas, tuplas, y diccionarios</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Agrega más secciones según sea necesario */}
-                </div>
-            </div>
 
             {/* Lista de estudio de Python */}
             <div className="container">
