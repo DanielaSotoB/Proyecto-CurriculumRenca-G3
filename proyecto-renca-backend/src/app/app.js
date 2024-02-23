@@ -2,8 +2,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const usuarioRoutes = require('../routes/usuario.routes.js');
+const morgan = require('morgan');
 
 const app = express();
+app.use(morgan('dev'));
 app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/registro_usuarios', {
