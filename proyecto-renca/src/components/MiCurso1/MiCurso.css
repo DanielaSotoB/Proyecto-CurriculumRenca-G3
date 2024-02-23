@@ -1,0 +1,39 @@
+/* Estilos para el contenedor principal */
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la barra de progreso */
+.progress {
+    margin-top: 20px;
+}
+
+/* Estilos para los elementos de la lista de estudio */
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para los elementos marcados */
+.list-group-item-success {
+    background-color: #d4edda !important;
+}
+
+/* Estilos para el botón de avanzar */
+.arrow-button {
+    margin-top: 20px;
+}
+
+/* Estilos para el video */
+.container iframe {
+    width: 100%;
+}
+
+/* Estilos para el título del temario */
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
