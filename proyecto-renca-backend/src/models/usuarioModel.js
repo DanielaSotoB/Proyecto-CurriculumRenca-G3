@@ -9,9 +9,9 @@ const usuarioSchema = new mongoose.Schema({
   correo: {
     type: String,
     required: true,
-    unique: true // asegura que cada correo sea único
+    unique: true 
   },
-  contraseña: {
+  password: {
     type: String,
     required: true
   }

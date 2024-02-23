@@ -4,7 +4,7 @@ exports.deleteUser = async (req, res) => {
   try {
     const usuario = await Usuario.findById(req.params.id);
     if (usuario) {
-      await usuario.remove();
+      await Usuario.deleteOne({ _id: req.params.id });
       res.json({ message: 'Usuario eliminado' });
     } else {
       res.status(404).json({ message: 'Usuario no encontrado' });
