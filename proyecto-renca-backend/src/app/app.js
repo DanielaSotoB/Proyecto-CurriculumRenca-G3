@@ -15,6 +15,6 @@ mongoose.connect('mongodb://localhost:27017/registro_usuarios', {
 .then(() => console.log('Conexión a MongoDB establecida'))
 .catch(err => console.error('Error al conectar a MongoDB:', err));
 
-app.use('/usuarios', usuarioRoutes);
+app.use('/api/usuarios', usuarioRoutes);
 
 module.exports = app; 

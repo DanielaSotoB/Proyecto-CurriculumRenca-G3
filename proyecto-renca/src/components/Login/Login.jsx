@@ -1,51 +1,41 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; // Importa useHistory desde react-router-dom
 import './Login.css';
+import axios from 'axios'; // Importa axios para realizar solicitudes HTTP
 
 const LoginRegistro = () => {
     const [isSignUp, setIsSignUp] = useState(true);
-    const [usuario, setUsuario] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const history = useHistory(); // Obtén el objeto history
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
 
     const toggleForm = () => {
         setIsSignUp(!isSignUp);
     };
 
-    const handleUsuarioChange = (event) => {
-        setUsuario(event.target.value);
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
-
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
-
-    const registrarUsuario = async () => {
-        try {
-            // Tu código de registro de usuario aquí
-            // Aquí se supone que recibirías una respuesta exitosa del backend
-
-            // Redirige al usuario a la página después del registro exitoso
-            history.push('/ruta-despues-del-registro');
-        } catch (error) {
-            console.error('Error al registrar usuario:', error);
-        }
-    };
-
-    const iniciarSesion = async () => {
-        try {
-            // Tu código de inicio de sesión aquí
-            // Aquí se supone que recibirías una respuesta exitosa del backend
-
-            // Redirige al usuario a la página después del inicio de sesión exitoso
-            history.push('/ruta-despues-del-inicio-de-sesion');
-        } catch (error) {
-            console.error('Error al iniciar sesión:', error);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (isSignUp) {
+            // Registro
+            try {
+                const response = await axios.post('/api/register', formData); // Cambia la URL por la ruta de registro en tu backend
+                console.log(response.data); // Maneja la respuesta del backend según sea necesario
+            } catch (error) {
+                console.error('Error al registrar:', error);
+            }
+        } else {
+            // Inicio de sesión
+            try {
+                const response = await axios.post('/api/login', formData); // Cambia la URL por la ruta de inicio de sesión en tu backend
+                console.log(response.data); // Maneja la respuesta del backend según sea necesario
+            } catch (error) {
+                console.error('Error al iniciar sesión:', error);
+            }
         }
     };
 
@@ -53,23 +43,23 @@ const LoginRegistro = () => {
         <body id="login-body">  
             <div className={`container-login2 ${isSignUp ? 'active' : ''}`} id="container-login2">
                 <div className="form-container-login2 sign-up">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <h1>Crear Cuenta</h1>
                         <br />
-                        <input type="text" placeholder="Usuario" value={usuario} onChange={handleUsuarioChange} />
-                        <input type="email" placeholder="Correo Electrónico" value={email} onChange={handleEmailChange} />
-                        <input type="password" placeholder="Contraseña" value={password} onChange={handlePasswordChange} />
-                        <button type="button" onClick={registrarUsuario}>Registrarme</button>
+                        <input type="text" placeholder="Usuario" name="username" value={formData.username} onChange={handleChange} />
+                        <input type="email" placeholder="Correo Electrónico" name="email" value={formData.email} onChange={handleChange} />
+                        <input type="password" placeholder="Contraseña" name="password" value={formData.password} onChange={handleChange} />
+                        <button type="submit">Registrarme</button>
                     </form>
                 </div>
                 <div className="form-container-login2 sign-in">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <h1>Ingresar</h1>
                         <br />
-                        <input type="email" placeholder="Correo Electrónico" value={email} onChange={handleEmailChange} />
-                        <input type="password" placeholder="Contraseña" value={password} onChange={handlePasswordChange} />
+                        <input type="email" placeholder="Correo Electrónico" name="email" value={formData.email} onChange={handleChange} />
+                        <input type="password" placeholder="Contraseña" name="password" value={formData.password} onChange={handleChange} />
                         <a href="#">¿Olvidaste tu contraseña?</a>
-                        <button type="button" onClick={iniciarSesion}>Ingresar</button>
+                        <button type="submit">Ingresar</button>
                     </form>
                 </div>
                 <div className="toggle-container-login2">
