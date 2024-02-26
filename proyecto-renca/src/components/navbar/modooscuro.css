@@ -1,13 +1,17 @@
+/* Estilos para el cuerpo de la página */
 body {
     transition: background-color 0.3s, color 0.3s;
-    background-color: #fff;
+    background-color: white; /* Color de fondo predeterminado */
+    color: #000; /* Color de texto predeterminado */
 }
 
+/* Estilos para el modo oscuro */
 .dark-mode {
-    background-color: #0d1021;
-    color: #ffffff;
+    background-color: black; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
 }
 
+/* Estilos para el interruptor de modo oscuro */
 .switch {
     position: relative;
     display: inline-block;
@@ -43,19 +47,19 @@ body {
     transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
     background-color: #2196F3;
 }
 
-input:focus+.slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
+/* Estilos adicionales para el interruptor de modo oscuro */
 .slider.round {
     border-radius: 34px;
 }
@@ -64,6 +68,7 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+/* Estilos adicionales para el navbar */
 #nav1 {
-    background: linear-gradient(to right, #Ff571e, #CEFF24, #0ab5fd);
+    background: linear-gradient(to right, #Ff571e, #CEFF24, #0ab5fd); /* Fondo de degradado en el navbar */
 }

@@ -23,7 +23,7 @@ function MiCurso() {
 
         // Mostrar mensaje de felicitaciones si todos los elementos están marcados
         if (itemsCompletados === totalItems) {
-            alert('¡Felicidades! Has completado el curso exitosamente.');
+            alert('¡Felicidades! Has completado el curso exitosamente, ya puedes descargar tu Certificado.');
         }
     };
 
@@ -56,7 +56,7 @@ function MiCurso() {
         <>
             <div className="container">
                 <h1>Video Example</h1>
-                <iframe width="560" height="315" src="https://youtu.be/CjmzDHMHxwU" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="415" src="https://www.youtube.com/embed/Kp4Mvapo5kc?si=qDj-_muoR071Lmcj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <button className="arrow-button text-end" onClick={avanzarItem}>
@@ -64,8 +64,6 @@ function MiCurso() {
                     <path d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933.042-.028a.147.147 0 0 0 0-.252l-.042-.028zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3z"/>
                 </svg>
             </button>
-
-
             {/* Lista de estudio de Python */}
             <div className="container">
                 <h2>Lista de Estudio de Python</h2>
@@ -95,8 +93,10 @@ function MiCurso() {
                         Proyecto Final
                         <input type="checkbox" className="form-check-input" id="item6" onClick={() => marcarItem(6)} />
                     </li>
-                    {/* Agrega más elementos según sea necesario */}
                 </ul>
+                <a className="btn-certificado" target="_blank" href= "../Certificado/CertificadoEjemplo.pdf" dowload="Certificado">
+Descargar Certificado
+    </a>
 
                 {/* Barra de progreso */}
                 <div id="progressBar" className="progress">

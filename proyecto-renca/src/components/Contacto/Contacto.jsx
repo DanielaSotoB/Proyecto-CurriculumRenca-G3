@@ -8,8 +8,9 @@ const Contacto = () => {
 
   return (
     <form className="form2" onSubmit={handleSubmit}>
-      <h2>Contacto</h2>
 
+      <h2>Contacto</h2>
+    
       <div className="input-group2">
         <label htmlFor="name">Nombre</label>
         <input type="text" name="name" id="name" placeholder="Nombre" required />
