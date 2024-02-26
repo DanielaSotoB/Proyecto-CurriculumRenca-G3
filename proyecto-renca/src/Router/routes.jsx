@@ -7,7 +7,7 @@ import PreguntasFrecuentes from "../Views/PreguntasFrecuentes";
 import LoginRegistro from "../Views/LoginRegistro";
 import ContactoPag from "../Views/ContactoPag";
 import AdmiPanelView from "../Views/AdmiPanelView";
-
+import MiCursito from "../Views/MiCursito";
 const router = createBrowserRouter([
   { path: "/", element: <RutaAprendizaje/>},
   { path: "/CursosDispo", element: <CursosDispo/> },
@@ -16,6 +16,8 @@ const router = createBrowserRouter([
   { path: "/LoginRegistro", element: <LoginRegistro/> },
   { path: "/Contactopag", element: <ContactoPag /> },
   { path: "/AdmiPanelView", element: <AdmiPanelView/> },
+  { path: "/MiCursito", element: <MiCursito/> },
+
 
 ]);
 

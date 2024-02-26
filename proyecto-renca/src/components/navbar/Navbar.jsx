@@ -72,7 +72,7 @@ const Navbar = () => {
                                 <a className="nav-link" href="/PreguntasFrecuentes">PREGUNTAS FRECUENTES</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/AdmiPanelView">CONTACTO</a>
+                                <a className="nav-link" href="/MiCursito">CONTACTO</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
