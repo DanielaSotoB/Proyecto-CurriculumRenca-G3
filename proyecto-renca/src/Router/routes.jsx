@@ -1,4 +1,6 @@
-import { createBrowserRouter } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "../utils/ProtectedRoute";
 
 import RutaAprendizaje from "../Views/RutaAprendizaje";
 import InformacionCursos from "../Views/InformacionCursos";
@@ -8,17 +10,30 @@ import LoginRegistro from "../Views/LoginRegistro";
 import ContactoPag from "../Views/ContactoPag";
 import AdmiPanelView from "../Views/AdmiPanelView";
 import MiCursito from "../Views/MiCursito";
-const router = createBrowserRouter([
-  { path: "/", element: <RutaAprendizaje/>},
-  { path: "/CursosDispo", element: <CursosDispo/> },
-  { path: "/InformacionCursos", element: <InformacionCursos /> },
-  { path: "/PreguntasFrecuentes", element: <PreguntasFrecuentes /> },
-  { path: "/LoginRegistro", element: <LoginRegistro/> },
-  { path: "/Contactopag", element: <ContactoPag /> },
-  { path: "/AdmiPanelView", element: <AdmiPanelView/> },
-  { path: "/MiCursito", element: <MiCursito/> },
 
+const AppRouter = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<RutaAprendizaje />} />
+        <Route
+          path="/CursosDispo"
+          element={<ProtectedRoute canActivate={true} />}
+        >
+          <Route element={<CursosDispo />} />
+        </Route>
+        <Route path="/InformacionCursos" element={<InformacionCursos />} />
+        <Route
+          path="/PreguntasFrecuentes"
+          element={<PreguntasFrecuentes />}
+        />
+        <Route path="/LoginRegistro" element={<LoginRegistro />} />
+        <Route path="/Contactopag" element={<ContactoPag />} />
+        <Route path="/AdmiPanelView" element={<AdmiPanelView />} />
+        <Route path="/MiCursito" element={<MiCursito />} />
+      </Routes>
+    </Router>
+  );
+};
 
-]);
-
-export default router;
+export default AppRouter;
