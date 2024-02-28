@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+// import './Login.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
@@ -16,8 +16,6 @@ const LoginRegistro = () => {
 
     const toggleForm = () => {
         setIsSignUp(!isSignUp);
-        localStorage.setItem('user', JSON.stringify(formData));
-        navigate('/CursosDispo');
     };
 
     const handleChange = (e) => {
@@ -37,15 +35,19 @@ const LoginRegistro = () => {
                 const response = await axios.post('http://localhost:4000/api/usuarios/crear-usuario', formData);
 
                 console.log('Registro exitoso:', response.data);
-                navigate('/CursosDispo');
                 
             } else {
                 // Inicio de sesión
-                const response = await axios.get('http://localhost:4000/api/usuarios/listar-usuarios/');
+                const response = await axios.get('http://localhost:4000/api/usuarios/listar-usuarios/', formData);
                 console.log('Inicio de sesión exitoso:', response.data);
             }
+            
+            // Redirigir al usuario a CursosDispo después del inicio de sesión o registro exitoso
+            navigate('/CursosDispo');
+
         } catch (error) {
             console.error('ERROR:', error);
+            setError("Error en el inicio de sesión o registro. Por favor, inténtalo de nuevo.");
         }
     };
 
@@ -81,4 +83,3 @@ const LoginRegistro = () => {
 };
 
 export default LoginRegistro;
-
