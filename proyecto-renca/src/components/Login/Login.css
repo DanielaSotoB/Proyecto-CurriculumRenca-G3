@@ -26,6 +26,10 @@
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    display: flex; /* Agregado para centrar verticalmente los formularios */
+    justify-content: center; /* Agregado para centrar verticalmente los formularios */
+    align-items: center; /* Agregado para centrar verticalmente los formularios */
+    flex-direction: column; /* Agregado para centrar verticalmente los formularios */
 }
 
 .container-login2 p {
@@ -87,6 +91,7 @@
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+    width: 100%; /* Ajustado para ocupar todo el ancho */
 }
 
 .sign-in {

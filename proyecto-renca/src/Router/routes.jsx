@@ -8,6 +8,18 @@ import LoginRegistro from "../Views/LoginRegistro";
 import ContactoPag from "../Views/ContactoPag";
 import AdmiPanelView from "../Views/AdmiPanelView";
 import MiCursito from "../Views/MiCursito";
+import MiCursito from "../Views/MiCursito";
+import AdmiPanelCurso from "../Views/AdmiPanelCurso";
+
+
+
+
+
+
+
+
+
+
 const router = createBrowserRouter([
   { path: "/", element: <RutaAprendizaje/>},
   { path: "/CursosDispo", element: <CursosDispo/> },
@@ -17,6 +29,7 @@ const router = createBrowserRouter([
   { path: "/Contactopag", element: <ContactoPag /> },
   { path: "/AdmiPanelView", element: <AdmiPanelView/> },
   { path: "/MiCursito", element: <MiCursito/> },
+  { path: "/AdmiPanelCurso", element: <AdmiPanelCurso/> },
 
 
 ]);

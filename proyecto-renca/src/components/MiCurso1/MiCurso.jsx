@@ -1,5 +1,6 @@
 import React from 'react';
 import './MiCurso.css';
+
 function MiCurso() {
     const marcarItem = (id) => {
         var checkbox = document.getElementById('item' + id);
@@ -50,6 +51,13 @@ function MiCurso() {
                 console.log('Ya has marcado todos los elementos.');
             }
         }
+
+        // Marcar automáticamente el checkbox de "Introducción a Python"
+        var checkboxIntroduccion = document.getElementById('item1');
+        if (checkboxIntroduccion) {
+            checkboxIntroduccion.checked = true;
+            marcarItem(1); // Llamar a la función para actualizar el progreso
+        }
     };
 
     return (
@@ -64,6 +72,7 @@ function MiCurso() {
                     <path d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933.042-.028a.147.147 0 0 0 0-.252l-.042-.028zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3z"/>
                 </svg>
             </button>
+
             {/* Lista de estudio de Python */}
             <div className="container">
                 <h2>Lista de Estudio de Python</h2>
@@ -94,9 +103,9 @@ function MiCurso() {
                         <input type="checkbox" className="form-check-input" id="item6" onClick={() => marcarItem(6)} />
                     </li>
                 </ul>
-                <a className="btn-certificado" target="_blank" href= "../Certificado/CertificadoEjemplo.pdf" dowload="Certificado">
-Descargar Certificado
-    </a>
+                <a className="btn-certificado" target="_blank" href="../Certificado/CertificadoEjemplo.pdf" download="Certificado">
+                    Descargar Certificado
+                </a>
 
                 {/* Barra de progreso */}
                 <div id="progressBar" className="progress">

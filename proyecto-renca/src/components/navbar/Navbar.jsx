@@ -81,7 +81,7 @@ const Navbar = () => {
                                 <a className="nav-link active" aria-current="page" href="/InformacionCursos"> INFO CURSOS</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/MiCursito"> MIS CURSOS</a>
+                                <a className="nav-link active" aria-current="page" href="/MiCursito"> MI CURSO</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/PreguntasFrecuentes">PREGUNTAS FRECUENTES</a>
