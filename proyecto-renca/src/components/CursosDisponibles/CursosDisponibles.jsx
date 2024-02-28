@@ -1,53 +1,23 @@
 import React, { useEffect, useState } from 'react';
-
-const courses = [
-    { 
-        title: "Curso Básico PYTHON", 
-        category: "Lenguajes-de-programación", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaVozccpgrxbSn5UuIW5IEop_0Q6sr8deqaSWePdvjg&s"
-    },
-    {
-        title: "Curso Básico Scratch", 
-        category: "desarrollo-web", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://edteam-media.s3.amazonaws.com/courses/original/a1a1984b-d7c7-4fdd-b176-6647819d3d2e.png"
-    },
-    { 
-        title: "Curso Básico Arduino", 
-        category: "desarrollo-web", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://edteam-media.s3.amazonaws.com/courses/original/1bada4e8-4bab-4be8-8f2e-83e285515187.png"
-    },
-    { 
-        title: "Curso Básico Excel", 
-        category: "python", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://edteam-media.s3.amazonaws.com/courses/original/506ead68-9257-44c7-8ff8-2d0c320b99dd.jpg"
-    },
-    { 
-        title: "Curso Básico AWS", 
-        category: "desarrollo-web", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_FeHat2EE3hkIvYfCpL9-IHyB9fluBCmxw&usqp=CAU"
-    },
-    { 
-        title: "Curso Básico Java", 
-        category: "Lenguajes-de-programación", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://edteam-media.s3.amazonaws.com/courses/big/152be9d3-4704-4639-b399-203a76a286c5.jpg"
-    },
-    { 
-        title: "Curso Inglés Básico", 
-        category: "Idiomas", 
-        description: "Aprende los fundamentos del desarrollo web, incluyendo HTML, CSS y JavaScript.",
-        image: "https://www.acritica.com/image/policy:1.308771.1687463101:1687463101/image.jpg?f=default&w=1200"
-    },
-];
+import axios from 'axios';
 
 const CursosDisponibles = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [courses, setCourses] = useState([]);
     const [filteredCourses, setFilteredCourses] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:3001/api/cursos/cursos'); // Cambia la URL según la ubicación de tu backend
+                setCourses(response.data);
+            } catch (error) {
+                console.error('Error al obtener cursos:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     useEffect(() => {
         if (selectedCategory === 'all') {
@@ -56,7 +26,7 @@ const CursosDisponibles = () => {
             const filtered = courses.filter(course => course.category === selectedCategory);
             setFilteredCourses(filtered);
         }
-    }, [selectedCategory]);
+    }, [selectedCategory, courses]);
 
     const handleCategoryChange = (event) => {
         setSelectedCategory(event.target.value);
@@ -77,7 +47,7 @@ const CursosDisponibles = () => {
             </div>
             <div id="course-list" className="row">
                 {filteredCourses.map(course => (
-                    <div className="col-md-4" key={course.title}>
+                    <div className="col-md-4" key={course._id}>
                         <div className="card course-card">
                             <img src={course.image} className="card-img-top" alt={course.title} />
                             <div className="card-body">

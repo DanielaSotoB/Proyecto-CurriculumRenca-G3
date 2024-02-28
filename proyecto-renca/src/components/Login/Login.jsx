@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './Login.css';
+// import './Login.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { Alert } from 'react-bootstrap';
 
 const LoginRegistro = () => {
     const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const LoginRegistro = () => {
         password: ''
     });
     const [isSignUp, setIsSignUp] = useState(true);
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const toggleForm = () => {
         setIsSignUp(!isSignUp);
@@ -21,21 +25,31 @@ const LoginRegistro = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            if (!formData.correo) {
+                setError("Por favor, ingresa un correo electrónico.");
+                return;
+            }
+
             if (isSignUp) {
                 // Registro
                 const response = await axios.post('http://localhost:4000/api/usuarios/crear-usuario', formData);
 
                 console.log('Registro exitoso:', response.data);
+                
             } else {
                 // Inicio de sesión
-                const response = await axios.get('http://localhost:4000/api/usuarios/listar-usuarios/');
+                const response = await axios.get('http://localhost:4000/api/usuarios/listar-usuarios/', formData);
                 console.log('Inicio de sesión exitoso:', response.data);
             }
+            
+            // Redirigir al usuario a CursosDispo después del inicio de sesión o registro exitoso
+            navigate('/CursosDispo');
+
         } catch (error) {
-            console.error('ERRO:', error);
+            console.error('ERROR:', error);
+            setError("Error en el inicio de sesión o registro. Por favor, inténtalo de nuevo.");
         }
     };
-    
 
     return (
         <div className={`container-login2 ${isSignUp ? 'active' : ''}`} id="container-login2">
@@ -44,8 +58,9 @@ const LoginRegistro = () => {
                     <h1>{isSignUp ? 'Crear Cuenta' : 'Ingresar'}</h1>
                     <br />
                     {isSignUp && <input type="text" placeholder="Usuario" name="nombre" value={formData.nombre} onChange={handleChange} />}
-                    <input type="correo" placeholder="Correo Electrónico" name="correo" value={formData.correo} onChange={handleChange} />
+                    <input type="email" placeholder="Correo Electrónico" name="correo" value={formData.correo} onChange={handleChange} />
                     <input type="password" placeholder="Contraseña" name="password" value={formData.password} onChange={handleChange} />
+                    {error && <Alert variant="danger">{error}</Alert>}
                     <button type="submit">{isSignUp ? 'Registrarme' : 'Ingresar'}</button>
                 </form>
             </div>
