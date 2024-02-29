@@ -70,11 +70,13 @@ const LoginRegistro = () => {
             <div className="toggle-container-login2">
                 <div className="toggle">
                     <div className={`toggle-panel toggle-left ${isSignUp ? '' : 'active'}`}>
+                    <img src="../public/img/logo-renca.png" width="150"/>
                         <h1>¡Regístrate en Currículum Renca!</h1>
                         <p>¿Ya tienes una cuenta?</p>
                         <button className="hidden" id="login" onClick={toggleForm}>Ingresa a tu cuenta</button>
                     </div>
                     <div className={`toggle-panel toggle-right ${isSignUp ? 'active' : ''}`}>
+                    <img src="../public/img/logo-renca.png" width="150"/>
                         <h1>¡Bienvenido a Currículum Renca!</h1>
                         <p>Si no estás registrado, puedes hacerlo aquí</p>
                         <button className="hidden" id="register" onClick={toggleForm}>Registrarse</button>
