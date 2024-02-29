@@ -1,41 +1,38 @@
 .footer {
-    /* background-color: #f8f9fa; */
-    padding: 5px 0;
-  }
-  
-  .footer .container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footer .row {
-    margin-bottom: 20px;
-  }
-  
-  .footer .logo {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 30px; /* Ajustado para bajar la imagen */
-  }
-  
-  .footer .footer-quote {
-    font-style: italic;
-    margin-top: 50px; /* Ajustado para bajar el texto */
-  }
-  
-  .footer h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  .footer p {
-    margin-bottom: 0;
-  }
-  
-  .center-content-with-border {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
+  /* background-color: #f8f9fa; */
+  padding: 20px 0;
+}
+
+.logo {
+  width: 100px; /* ajusta el ancho según sea necesario */
+  height: auto; /* para mantener la proporción */
+}
+
+.footer-quote {
+  font-style: italic;
+}
+
+#iconos {
+  margin-top: 10px;
+}
+
+#iconos a {
+  margin-right: 10px;
+  color: #000; /* color de los iconos */
+}
+
+/* Ajusta los estilos de los colores de la barra inferior */
+.container .row .col-2 {
+  /* ajusta aquí cualquier estilo específico necesario */
+}
+
+/* Estilos para la frase del pie de página */
+.fs-5 {
+  font-size: 1.25rem;
+  color: #000; /* color del texto */
+}
+
+/* Ajusta los estilos de los íconos de redes sociales */
+#iconos i {
+  font-size: 1.5rem;
+}
