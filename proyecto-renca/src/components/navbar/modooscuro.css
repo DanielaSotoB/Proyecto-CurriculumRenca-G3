@@ -1,14 +1,9 @@
 /* Estilos para el cuerpo de la página */
-body {
-    transition: background-color 0.3s, color 0.3s;
-    background-color: white; /* Color de fondo predeterminado */
-    color: #000; /* Color de texto predeterminado */
-}
 
-/* Estilos para el modo oscuro */
-.dark-mode {
-    background-color: black; /* Color de fondo oscuro */
-    color: #ffffff; /* Color de texto claro */
+body.dark-mode {
+    background-color: #000 !important;
+    color: #fff;
+    
 }
 
 /* Estilos para el interruptor de modo oscuro */
@@ -24,6 +19,7 @@ body {
     width: 0;
     height: 0;
 }
+
 
 .slider {
     position: absolute;

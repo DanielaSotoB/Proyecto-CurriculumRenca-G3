@@ -1,6 +1,7 @@
 
 import './Footer.css'; // Asegúrate de que la ruta sea correcta
 
+
 const Footer = () => {
   return (
     <footer className="footer">

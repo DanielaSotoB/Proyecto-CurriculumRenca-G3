@@ -35,14 +35,16 @@ const Navbar = () => {
                     <div className="row pb-2 text-end">
                         <div className="col-6">
                             <div className="row">
-                                <div className="col text-end">
-                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
-                                        <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
-                                    </svg> 
-                                </div>
+       {/* Interruptor del modo oscuro */}
+{/* Solo el icono del interruptor del modo oscuro */}
+<div className="col text-end" onClick={toggleModoOscuro}>
+    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
+        <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
+    </svg> 
+</div>
                             </div>
                         </div>
-                        {/* <div className="col-6 text-end">
+                        <div className="col-6 text-end">
                             <form className="navbar-form" role="search" action="#" method="get">
                                 <div className="form-group">
                                     <div className="input-group">
@@ -55,7 +57,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </form>
-                        </div>  */}
+                        </div>  
                     </div>
                 </div>
             </header>
@@ -96,11 +98,6 @@ const Navbar = () => {
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                             <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                         </svg>
-                        {/* Interruptor del modo oscuro */}
-                        <label className="switch">
-                            <input type="checkbox" id="darkbtn" onChange={toggleModoOscuro} />
-                            <span className="slider round"></span>
-                        </label>
                     </div>
                 </div>
             </nav>
