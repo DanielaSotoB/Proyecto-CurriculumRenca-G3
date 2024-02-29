@@ -24,12 +24,12 @@ const Footer = () => {
 
       <div className="container py-1">
         <div className="row" style={{ width: '100%', marginLeft: 0, marginBottom: 'margin-down'}}>
-          <div className="col-2" style={{ height: '15px', backgroundColor: '#d75e24'}}></div>
-          <div className="col-2" style={{ height: '15px', backgroundColor: '#e68e0c'}}></div>
-          <div className="col-2" style={{ height: '15px', backgroundColor: '#769e33'}}></div>
-          <div className="col-2" style={{ height: '15px', backgroundColor: '#009a88'}}></div>
-          <div className="col-2" style={{ height: '15px', backgroundColor: '#5fb9d3'}}></div>
-          <div className="col-2" style={{ height: '15px', backgroundColor: '#0192d0'}}></div>
+          <div className="col-2" style={{ height: '15px', backgroundColor: '#ff571e'}}></div>
+          <div className="col-2" style={{ height: '15px', backgroundColor: '#fda22d'}}></div>
+          <div className="col-2" style={{ height: '15px', backgroundColor: '#ceff24'}}></div>
+          <div className="col-2" style={{ height: '15px', backgroundColor: '#8ae571'}}></div>
+          <div className="col-2" style={{ height: '15px', backgroundColor: '#02edca'}}></div>
+          <div className="col-2" style={{ height: '15px', backgroundColor: '#0ab5fd'}}></div>
         </div>
       </div>
 

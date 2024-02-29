@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-// import './Login.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
+import './Login.css';
 
 const LoginRegistro = () => {
     const [formData, setFormData] = useState({
@@ -16,6 +16,8 @@ const LoginRegistro = () => {
 
     const toggleForm = () => {
         setIsSignUp(!isSignUp);
+        const container = document.getElementById('container');
+        container.classList.toggle("active");
     };
 
     const handleChange = (e) => {
@@ -52,6 +54,7 @@ const LoginRegistro = () => {
     };
 
     return (
+        <body id="body-login">
         <div className={`container-login2 ${isSignUp ? 'active' : ''}`} id="container-login2">
             <div className="form-container-login2 sign-up">
                 <form onSubmit={handleSubmit}>
@@ -79,6 +82,7 @@ const LoginRegistro = () => {
                 </div>
             </div>
         </div>
+        </body>
     );
 };
 
