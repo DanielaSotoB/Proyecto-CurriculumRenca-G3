@@ -1,0 +1,67 @@
+/* Estilos para el contenedor principal */
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+/* Estilos para la barra superior */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilos para el input de búsqueda */
+.top input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Estilos para el botón 'Agregar Nuevo' */
+.top button {
+    padding: 5px 10px;
+    background-color: #0ab5fd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilos para las celdas de la tabla */
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos para la imagen de usuario */
+.user img {
+    margin-right: 10px;
+}
+
+  /* Estilos para los botones de acción */
+.buttons button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #0ab5fd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
