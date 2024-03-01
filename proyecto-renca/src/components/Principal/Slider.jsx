@@ -4,15 +4,15 @@ const Principal = () => {
         <div id="carousel" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active" data-bs-interval="3000">
-                    <img src="../public/img/POWER BI BASICO.png" className="d-block w-100" alt="" />
+                    <img src="../img/POWER BI BASICO.png" className="d-block w-100" alt="" />
                 </div>
 
                 <div className="carousel-item" data-bs-interval="3000">
-                    <img src="../public/img/PHYTON.png" className="d-block w-100" alt="..." />
+                    <img src="../img/PHYTON.png" className="d-block w-100" alt="..." />
                 </div>
 
                 <div className="carousel-item" data-bs-interval="3000">
-                    <img src="../public/img/INGLES.png" className="d-block w-100" alt="..." />
+                    <img src="../img/INGLES.png" className="d-block w-100" alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
