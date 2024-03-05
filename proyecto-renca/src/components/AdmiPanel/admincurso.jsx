@@ -5,7 +5,7 @@ const AdminCurso = () => {
     const [formData, setFormData] = useState({
         title: '',
         description: '',
-        category: '',
+        category: 'all', // Valor predeterminado para el selector de categoría
         image: '',
     });
     const [alert, setAlert] = useState(null);
@@ -30,7 +30,7 @@ const AdminCurso = () => {
                 setFormData({
                     title: '',
                     description: '',
-                    category: '',
+                    category: 'all', // Reiniciar el valor del selector de categoría después de enviar el formulario
                     image: '',
                 });
             } catch (error) {
@@ -63,12 +63,27 @@ const AdminCurso = () => {
                     <input type="text" className="form-control" id="title" name="title" value={formData.title} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="description" className="form-label">Descripción</label>
-                    <textarea className="form-control" id="description" name="description" value={formData.description} onChange={handleChange} required />
-                </div>
+    <label htmlFor="description" className="form-label">Descripción (máximo 30 letras)</label>
+    <textarea 
+        className="form-control" 
+        id="description" 
+        name="description" 
+        value={formData.description} 
+        onChange={handleChange} 
+        maxLength={30} // Aquí se establece el límite de 30 caracteres
+        required 
+    />
+    <small className="form-text text-muted">{30 - formData.description.length} letras restantes</small>
+</div>
+
                 <div className="mb-3">
                     <label htmlFor="category" className="form-label">Categoría</label>
-                    <input type="text" className="form-control" id="category" name="category" value={formData.category} onChange={handleChange} required />
+                    <select id="category" className="form-control" name="category" value={formData.category} onChange={handleChange} required>
+                        <option value="all">Todos</option>
+                        <option value="Desarrollo">Desarrollo Web</option>
+                        <option value="Lenguajes-de-programación">Lenguajes de programación</option>
+                        <option value="Idiomas">Idiomas</option>
+                    </select>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="image" className="form-label">URL de la Imagen</label>
@@ -87,7 +102,7 @@ const AdminCurso = () => {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleCancel}>Cancelar</button>
-                                <button type="submit" className="btn btn-primary">Sí, Subir Curso</button>
+                                <button type="submit" className="btn btn-primary"data-bs-dismiss="modal" onClick={handleCancel}>Sí, Subir Curso</button>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,11 @@
 /* Estilos para el cuerpo de la página */
 
 body.dark-mode {
+<<<<<<< HEAD
+    background-color: #1f1a1a !important;
+=======
     background-color: #242424 !important;
+>>>>>>> 7b6e637df951ce8dbc7345b91d6af60bba864ff0
     color: #fff;
     
 }
