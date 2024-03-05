@@ -39,56 +39,51 @@ const Navbar = () => {
                 <div className="col-4 col-lg-6">
                     <div className="row">
                         <div className="col-7 col-lg-7 col-xl-4">
-                            <a href="https://renca.cl/">
+                            <a href="">
                                 <img src="../img/logo-renca.png" style={{ maxHeight: '60px' }} alt="Ilustre Municipalidad de Renca" />
                             </a>
                         </div>
                     </div>
                 </div>
                 <div className="col-8 col-lg-6 justify-content-end">
-                    <div className="row pb-2 text-end">
-                        <div className="col-6">
-                            <div className="row">
-<<<<<<< HEAD
-       {/* Interruptor del modo oscuro */}
-{/* Solo el icono del interruptor del modo oscuro */}
-<div className="col text-end" onClick={toggleModoOscuro}>
-    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
-        <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
-    </svg> 
-</div>
-=======
-                                <div className="col text-end">
-                                    <button className="btn btn-aumentar me-2" onClick={aumentarTexto}>+A</button>
-                                    <button className="btn btn-disminuir" onClick={disminuirTexto}>-A</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col text-end" onClick={toggleModoOscuro}>
-                                    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
-                                        <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
-                                    </svg> 
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 text-end">
-                            <form className="navbar-form" role="search" action="#" method="get">
-                                <div className="form-group">
-                                    <div className="input-group">
-                                        <input type="text" name="s" id="search" placeholder="¿Qué deseas aprender?" className="form-control" style={{ fontSize: '80%', borderRadius: '5px' }} />
-                                        <button type="submit" className="btn btn-outline-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>  
+    <div className="row pb-2 text-end">
+        <div className="col-3">
+            <div className="row">
+                <div className="col text-end">
+                    <button id= "tamaño-texto" className="btn btn-aumentar me-2" onClick={aumentarTexto}>+A</button>
+                    <button id= "tamaño-texto"  className="btn btn-disminuir" onClick={disminuirTexto}>-A</button>
+                </div>
+            </div>
+        </div>
+        <div className="col-1">
+            <div className="row">
+                <div className="col text-end" onClick={toggleModoOscuro}>
+                    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
+                        <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
+                    </svg> 
+                </div>
+            </div>
+        </div>
+ 
+        <div className="col">
+            <form className="navbar-form" role="search" action="#" method="get">
+                <div className="form-group">
+                    <div className="input-group">
+                        <input type="text" name="s" id="search" placeholder="¿Qué deseas aprender?" className="form-control" style={{ fontSize: '80%', borderRadius: '5px' }} />
+                        <button type="submit" className="btn btn-outline-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
             </header>
 
             <nav id="nav1" className="navbar navbar-expand-lg">

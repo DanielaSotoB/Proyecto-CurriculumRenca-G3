@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://connierojas63:Cony1215@proyectocurriculumrenca.k0rpzbv.mongodb.net/',{
+mongoose.connect('mongodb://localhost:27017/registro_usuarios',{
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
