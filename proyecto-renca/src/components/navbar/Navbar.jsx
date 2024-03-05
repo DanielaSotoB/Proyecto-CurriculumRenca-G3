@@ -10,6 +10,9 @@ const Navbar = () => {
         setModoOscuro(!modoOscuro);
     };
 
+ // Estado para el tamaño del texto
+ const [tamanioTexto, setTamanioTexto] = useState(16); 
+
     // Efecto para aplicar el modo oscuro al body cuando cambia el estado
     useEffect(() => {
         if (modoOscuro) {
@@ -19,6 +22,17 @@ const Navbar = () => {
         }
     }, [modoOscuro]);
 
+    // Función para aumentar el tamaño del texto
+    const aumentarTexto = () => {
+        setTamanioTexto(tamanioTexto + 2);
+        document.documentElement.style.fontSize = `${tamanioTexto + 2}px`;
+    };
+
+    // Función para disminuir el tamaño del texto
+    const disminuirTexto = () => {
+        setTamanioTexto(tamanioTexto - 2);
+        document.documentElement.style.fontSize = `${tamanioTexto - 2}px`;
+    };
     return (
         <>
             <header className={`header--featured row mt-4 mb-1 mx-4 d-none d-md-flex ${modoOscuro ? 'dark-mode' : ''}`}>
@@ -35,6 +49,7 @@ const Navbar = () => {
                     <div className="row pb-2 text-end">
                         <div className="col-6">
                             <div className="row">
+<<<<<<< HEAD
        {/* Interruptor del modo oscuro */}
 {/* Solo el icono del interruptor del modo oscuro */}
 <div className="col text-end" onClick={toggleModoOscuro}>
@@ -42,6 +57,21 @@ const Navbar = () => {
         <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
     </svg> 
 </div>
+=======
+                                <div className="col text-end">
+                                    <button className="btn btn-aumentar me-2" onClick={aumentarTexto}>+A</button>
+                                    <button className="btn btn-disminuir" onClick={disminuirTexto}>-A</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="row">
+                                <div className="col text-end" onClick={toggleModoOscuro}>
+                                    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
+                                        <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
+                                    </svg> 
+                                </div>
+>>>>>>> 7b6e637df951ce8dbc7345b91d6af60bba864ff0
                             </div>
                         </div>
                         <div className="col-6 text-end">
@@ -83,7 +113,7 @@ const Navbar = () => {
                                 <a className="nav-link" href="/PreguntasFrecuentes">PREGUNTAS FRECUENTES</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/ContactoPag">CONTACTO</a>
+                                <a className="nav-link" href="/MiCursito">CONTACTO</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
