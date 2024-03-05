@@ -10,7 +10,7 @@ const Tarjetas = () => {
                         <div className="card-body">
                             <h1 className="h5 card-title">Curso Básico PYTHON</h1>
                             <p className="card-text">Duración: 10 horas</p>
-                            <a href="info.html" className="btn btn-primary">Ir al curso</a>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
                         </div>
                     </div>
                 </div>
@@ -21,7 +21,7 @@ const Tarjetas = () => {
                         <div className="card-body">
                             <h1 className="h5 card-title">Curso Básico Scratch</h1>
                             <p className="card-text">Duración: 3 horas</p>
-                            <a href="#" className="btn btn-primary">Ir al curso</a>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const Tarjetas = () => {
                         <div className="card-body">
                             <h1 className="h5 card-title">Curso Básico Arduino</h1>
                             <p className="card-text">Duración: 5 horas</p>
-                            <a href="#" className="btn btn-primary">Ir al curso</a>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const Tarjetas = () => {
                         <div className="card-body">
                             <h1 className="h5 card-title">Curso Básico Java</h1>
                             <p className="card-text">Duración: 7 horas</p>
-                            <a href="#" className="btn btn-primary">Ir al curso</a>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const Tarjetas = () => {
                         <div className="card-body">
                             <h1 className="h5 card-title">Curso Básico Excel</h1>
                             <p className="card-text">Duración: 7 horas</p>
-                            <a href="#" className="btn btn-primary">Ir al curso</a>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const Tarjetas = () => {
                         <div className="card-body">
                             <h1 className="h5 card-title">Curso Básico AWS</h1>
                             <p className="card-text">Duración: 7 horas</p>
-                            <a href="#" className="btn btn-primary">Ir al curso</a>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
                         </div>
                     </div>
                 </div>

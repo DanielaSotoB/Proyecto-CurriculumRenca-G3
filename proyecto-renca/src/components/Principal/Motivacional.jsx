@@ -8,7 +8,7 @@ const Motivacional = () => {
                 <h2 className="card-title text-white">¡Descubre el poder del aprendizaje!</h2>
                 <p className="card-text text-white-50">Cada nuevo conocimiento es un paso más hacia el crecimiento y el éxito.
                     Atrévete a tomar un curso y desbloquea tu potencial.</p>
-                <a href="#" className="btn btn-outline-light">Explora nuestros cursos</a>
+                <a href="/CursosDispo" className="btn btn-outline-light">Explora nuestros cursos</a>
             </div>
         </div>
     );
