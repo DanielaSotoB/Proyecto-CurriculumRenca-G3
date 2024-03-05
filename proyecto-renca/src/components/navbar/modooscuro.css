@@ -1,14 +1,17 @@
 /* Estilos para el cuerpo de la página */
 
 body.dark-mode {
-<<<<<<< HEAD
-    background-color: #1f1a1a !important;
-=======
-    background-color: #242424 !important;
->>>>>>> 7b6e637df951ce8dbc7345b91d6af60bba864ff0
-    color: #fff;
+    background-color: #212121 !important;
+    color: #e8e8e8;
     
 }
+
+#tamaño-texto{
+
+    background-color: #1b1111 !important;
+    color: #e8e8e8;  
+}
+
 
 /* Estilos para el interruptor de modo oscuro */
 .switch {
@@ -34,6 +37,7 @@ body.dark-mode {
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
+
 }
 
 .slider:before {
@@ -50,6 +54,7 @@ body.dark-mode {
 input:checked + .slider {
     background-color: #2196F3;
 }
+
 
 input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;

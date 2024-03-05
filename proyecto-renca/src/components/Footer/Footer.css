@@ -21,11 +21,6 @@
   color: #000; /* color de los iconos */
 }
 
-/* Ajusta los estilos de los colores de la barra inferior */
-.container .row .col-2 {
-  /* ajusta aquí cualquier estilo específico necesario */
-}
-
 /* Estilos para la frase del pie de página */
 .fs-5 {
   font-size: 1.25rem;
