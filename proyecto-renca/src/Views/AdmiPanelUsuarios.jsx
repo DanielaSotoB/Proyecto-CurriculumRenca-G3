@@ -1,21 +1,18 @@
 // import React from "react";
 import NavbarAdministrador from "../components/navbarAdmi/NavbarAdmistrador";
 import Footer from "../components/Footer/Footer";
-import AdmiPanel from "../components/AdmiPanel/AdmiPanel";
-
-// import EditarCursoAdmi from "../components/AdmiPanel/EditarCursoAdmi";
+import AdminUsuarios from "../components/AdmiPanel/AdminUsuarios";
 
 
-const AdmiPanelView = () => {
+
+const AdmiPanelUsuarios = () => {
     return (
     <>
         <NavbarAdministrador />
-        <AdmiPanel/>
-       
-       
+        <AdminUsuarios />
         <Footer />
     </>
     );
 }
 
-export default AdmiPanelView;
+export default AdmiPanelUsuarios;

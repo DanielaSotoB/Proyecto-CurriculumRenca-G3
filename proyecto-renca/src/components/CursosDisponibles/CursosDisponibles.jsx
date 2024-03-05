@@ -39,7 +39,7 @@ const CursosDisponibles = () => {
                 <div className="col-md-4">
                     <select id="filter-category" className="form-control" value={selectedCategory} onChange={handleCategoryChange}>
                         <option value="all">Todos</option>
-                        <option value="desarrollo-web">Desarrollo Web</option>
+                        <option value="Desarrollo">Desarrollo Web</option>
                         <option value="Lenguajes-de-programación">Lenguajes de programación</option>
                         <option value="Idiomas">Idiomas</option>
                     </select>

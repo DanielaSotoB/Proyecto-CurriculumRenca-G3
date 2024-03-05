@@ -1,7 +1,6 @@
-import React from 'react';
 import './perfilUsuario.css'; 
 
-const PerfilUsuario = () => {
+const PerfilUsuarios = () => {
   return (
     <>
     
@@ -104,4 +103,4 @@ const PerfilUsuario = () => {
   );
 };
 
-export default PerfilUsuario;
+export default PerfilUsuarios;

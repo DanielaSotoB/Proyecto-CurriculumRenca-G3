@@ -96,8 +96,10 @@ const AdminPanel = () => {
                       <div className="card-body">
                         <h5 className="card-title">Usuarios</h5>
                         <p className="card-text">Gestiona los usuarios del sistema.</p>
-                        {/* Add your redirection logic or function here */}
-                        <button className="btn btn-primary" onClick={() => redirectToPage('/usuarios')}>Ir a Usuarios</button>
+              
+                        <a target="_blank" href="/AdmiPanelUsuarios">
+                        <button className="btn btn-primary" type="button">Ir a usuarios</button>
+                    </a>
                       </div>
                     </div>
                   </div>
@@ -107,24 +109,32 @@ const AdminPanel = () => {
                         <h5 className="card-title">Cursos</h5>
                         <p className="card-text">Administra los cursos disponibles.</p>
                         {/* Add your redirection logic or function here */}
+                        <a target="_blank" href="/AdmiPanelCurso">
+                        <button className="btn btn-primary" type="button">Ir a cursos</button>
+                    </a>
+                
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="card mb-3">
+                      <div className="card-body">
+                        <h5 className="card-title">Cursos creado</h5>
+                        <p className="card-text">Editar los cursos disponibles.</p>
+                        {/* Add your redirection logic or function here */}
                         <button className="btn btn-primary" onClick={() => redirectToPage('/AdmiPanelCurso')}>Ir a Cursos</button>
                       </div>
                     </div>
                   </div>
+                 
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="col-md-3 sidebar bg-light">
-          <div className="sidebar-heading">
-            Estadísticas
-          </div>
-          <div className="card mb-3">
-            <div className="card-body">
-              <canvas id="cursosChart"></canvas>
-            </div>
-          </div>
+          
+          
           <div className="calendar-container">
             <h5>Calendario</h5>
             <Calendar
