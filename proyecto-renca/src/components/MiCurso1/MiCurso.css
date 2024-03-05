@@ -1,7 +1,9 @@
 /* Estilos para el contenedor principal */
-.container {
+.container-cursito {
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 80%;
+    
 }
 
 /* Estilos para la barra de progreso */
@@ -29,7 +31,7 @@
 }
 
 /* Estilos para el video */
-.container iframe {
+.container-cursito iframe {
     width: 100%;
 }
 
