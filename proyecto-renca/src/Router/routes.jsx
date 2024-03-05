@@ -13,7 +13,7 @@ import ContactoPag from "../Views/ContactoPag";
 import AdmiPanelView from "../Views/AdmiPanelView";
 import MiCursito from "../Views/MiCursito";
 import AdmiPanelCurso from "../Views/AdmiPanelCurso";
-
+import NavBarUser from "../Views/NavBarUser";
 
 
 
@@ -29,7 +29,8 @@ const router = createBrowserRouter([
   { path: "/MiCursito", element: <MiCursito /> },
   { path: "/AdmiPanelCurso", element: <AdmiPanelCurso /> },
   { path: "/AdmiPanelCurso", element: <AdmiPanelCurso /> },
-  
+  { path: "/NavBarUser", element: <NavBarUser /> },
+
 
 
   // Utiliza ProtectedRoute para la ruta de Contactopag

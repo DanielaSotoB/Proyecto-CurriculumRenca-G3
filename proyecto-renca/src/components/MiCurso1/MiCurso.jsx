@@ -64,32 +64,32 @@ function MiCurso() {
         <>
             <div className="container-cursito">
                 <h1>¡Bienvenido a tu curso!</h1>
-                <iframe width="560" height="415" src="https://www.youtube.com/embed/Kp4Mvapo5kc?si=qDj-_muoR071Lmcj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/UzAHubCqyHo?si=qchVP1dZlXMVKiw1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
-            {/* Lista de estudio de Python */}
+            {/* Lista de estudio PPT */}
             <div className="container-cursito">
-                <h2>Lista de Estudio de Python</h2>
+                <h2>Creación presentación PowerPoint</h2>
 
                 <ul id="listaEstudio" className="list-group">
                     <li className="list-group-item d-flex justify-content-between align-items-center" data-id="1">
-                        Introducción a Python
+                        ¿Qué es PowerPoint?
                         <input type="checkbox" className="form-check-input" id="item1" onClick={() => marcarItem(1)} />
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center" data-id="2">
-                        Variables y Tipos de Datos
+                        Crear una presentación
                         <input type="checkbox" className="form-check-input" id="item2" onClick={() => marcarItem(2)} />
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center" data-id="3">
-                        Estructuras de Control (if, else, while)
+                       Agregar una diapositiva
                         <input type="checkbox" className="form-check-input" id="item3" onClick={() => marcarItem(3)} />
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center" data-id="4">
-                        Orientación a Objetos en Python
+                        Agregar texto y darle formato
                         <input type="checkbox" className="form-check-input" id="item4" onClick={() => marcarItem(4)} />
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center" data-id="5">
-                        Manejo de Excepciones
+                       Agregar imágenes y estilos
                         <input type="checkbox" className="form-check-input" id="item5" onClick={() => marcarItem(5)} />
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center" data-id="6">
