@@ -29,7 +29,7 @@ const PreguntasFrecuentes = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-princ">
       <div className="row">
         <div className="container-faq">
           <div className="title-faq">
@@ -69,7 +69,9 @@ const PreguntasFrecuentes = () => {
               <div className="more"><i>+</i></div>
             </div>
             <div className="answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus incidunt consequatur ad at labore, distinctio neque voluptate est molestiae voluptatum laudantium quae temporibus tempora! Corporis, vitae? Dolore exercitationem nulla omnis! <span>A</span></p>
+              <p>Ser Mayor de edad. <br></br> 
+              Contar con el registro social de hogares por debajo del 70% <br/>
+              Residir en la Comuna de Renca<span>A</span></p>
             </div>
           </div>
 
@@ -79,7 +81,7 @@ const PreguntasFrecuentes = () => {
               <div className="more"><i>+</i></div>
             </div>
             <div className="answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus incidunt consequatur ad at labore, distinctio neque voluptate est molestiae voluptatum laudantium quae temporibus tempora! Corporis, vitae? Dolore exercitationem nulla omnis! <span>A</span></p>
+              <p>Si! Todos los cursos que ofrecemos cuentan con sus certificados de aprobacion. <span>A</span></p>
             </div>
           </div>
 
@@ -89,7 +91,7 @@ const PreguntasFrecuentes = () => {
               <div className="more"><i>+</i></div>
             </div>
             <div className="answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus incidunt consequatur ad at labore, distinctio neque voluptate est molestiae voluptatum laudantium quae temporibus tempora! Corporis, vitae? Dolore exercitationem nulla omnis! <span>A</span></p>
+              <p> Por lo general no, sin embargo debes estar pendiente a la descripcion del curso, ya que algunos son impartidos por personas externas y tiene ciertos limites de tiempo. <span>A</span></p>
             </div>
           </div>
 
@@ -99,7 +101,10 @@ const PreguntasFrecuentes = () => {
               <div className="more"><i>+</i></div>
             </div>
             <div className="answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus incidunt consequatur ad at labore, distinctio neque voluptate est molestiae voluptatum laudantium quae temporibus tempora! Corporis, vitae? Dolore exercitationem nulla omnis! <span>A</span></p>
+              <p>Ofrecemos cursos de varios temas, siendo los principales: <br></br>
+              Idiomas<br/>
+              Tecnologia<br/>
+              Administracion <br/> <span>A</span></p>
             </div>
           </div>
 
