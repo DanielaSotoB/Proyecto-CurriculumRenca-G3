@@ -1,45 +1,103 @@
-/* Estilos para el contenedor principal */
-.container-cursito {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 80%;
-    
+/* Estilos para el curso de creación de currículum */
+
+.curso-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Estilos para la barra de progreso */
+.curso-content {
+  margin-top: 20px;
+}
+
 .progress {
-    margin-top: 20px;
+  height: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 20px;
+  position: relative;
 }
 
-/* Estilos para los elementos de la lista de estudio */
-.list-group-item {
-    cursor: pointer;
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
 }
 
-.list-group-item:hover {
-    background-color: #f0f0f0;
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #000;
 }
 
-/* Estilos para los elementos marcados */
-.list-group-item-success {
-    background-color: #d4edda !important;
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-/* Estilos para el botón de avanzar */
-.arrow-button {
-    margin-top: 20px;
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* Estilos para el video */
-.container-cursito iframe {
-    width: 100%;
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-/* Estilos para el título del temario */
-.mb-4 {
-    margin-bottom: 1.5rem !important;
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.btn-certificado {
-    color: blue;
+button:hover {
+  background-color: #0056b3;
 }
+
+.image-container1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del botón */
+  }
+  
+
+  .image-container2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del botón */
+  }
+
+  .image-container3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del botón */
+  }
+
+  .image-container4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del botón */
+  }
+
+  .image-container5 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del botón */
+  }
+
+  .image-container6 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del botón */
+  }

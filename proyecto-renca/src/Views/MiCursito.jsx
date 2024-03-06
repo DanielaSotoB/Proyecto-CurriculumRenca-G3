@@ -7,7 +7,7 @@ import MiCurso from "../components/MiCurso1/MiCurso";
 function MiCursito() {
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <MiCurso/>
             <Footer />
         </>

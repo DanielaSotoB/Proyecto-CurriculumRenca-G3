@@ -1,112 +1,156 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './MiCurso.css';
 
+// Módulo para el primer paso del tutorial
+function Paso1({ avanzar }) {
+    return (
+        <div>
+            <h3>Paso 1: Datos personales</h3>
+            <div className="image-container1">
+                <img src="../img/DATOS PERSONALES (1).png" alt="Datos Personales" />
+            </div>
+            <button onClick={avanzar}>Siguiente</button>
+        </div>
+    );
+}
+
+// Módulo para el segundo paso del tutorial
+function Paso2({ avanzar, retroceder }) {
+    return (
+        <div>
+            <h3>Paso 2: Experiencia laboral</h3>
+            <div className="image-container2">
+                <img src="../img/EXPERIENCIA LAB.png" alt="Experiencia Laboral" />
+            </div>
+            <button onClick={retroceder}>Anterior</button>
+            <button onClick={avanzar}>Siguiente</button>
+        </div>
+    );
+}
+
+// Módulo para el tercer paso del tutorial
+function Paso3({ avanzar, retroceder }) {
+    return (
+        <div>
+            <h3>Paso 3: Educación</h3>
+            <div className="image-container3">
+                <img src="../img/EDUCACION.png" alt="Educacion" />
+            </div>
+            <button onClick={retroceder}>Anterior</button>
+            <button onClick={avanzar}>Siguiente</button>
+        </div>
+    );
+}
+
+// Módulo para el cuarto paso del tutorial
+function Paso4({ avanzar, retroceder }) {
+    return (
+        <div>
+            <h3>Paso 4: Habilidades Y Competencias</h3>
+            <div className="image-container4">
+                <img src="../img/HABILIDADES.png" alt="Habilidades" />
+            </div>
+            <button onClick={retroceder}>Anterior</button>
+            <button onClick={avanzar}>Siguiente</button>
+        </div>
+    );
+}
+
+
+// Módulo para el quinto paso del tutorial
+function Paso5({ avanzar, retroceder }) {
+    return (
+        <div>
+            <h3>Paso 5: Datos de interés</h3>
+            <div className="image-container5">
+                <img src="../img/INTERES.png" alt="Interes" />
+            </div>
+            <button onClick={retroceder}>Anterior</button>
+            <button onClick={avanzar}>Siguiente</button>
+        </div>
+    );
+}
+
+
+// Módulo para el sexto paso del tutorial
+function Paso6({ retroceder }) {
+    return (
+        <div>
+            <h3>Paso 6: ¡AHORA CREA TU PROPIO CV!</h3>
+            <div className="image-container6">
+                <img src="../img/CV.png" alt="CV" />
+            </div>
+            <button onClick={retroceder}>Anterior</button>
+                    </div>
+    );
+}
+
+// Componente principal del curso
 function MiCurso() {
-    const marcarItem = (id) => {
-        var checkbox = document.getElementById('item' + id);
-        var listaEstudio = document.getElementById('listaEstudio');
-        var listItem = listaEstudio.querySelector('[data-id="' + id + '"]');
-        var progressBar = document.getElementById('progressBar');
+    const [pasoActual, setPasoActual] = useState(0); // Estado para el paso actual del tutorial
+    const [cursoCompleto, setCursoCompleto] = useState(false); // Estado para verificar si el curso está completo
 
-        // Cambiar el estilo del elemento de la lista según si está marcado o no
-        if (checkbox.checked) {
-            listItem.classList.add('list-group-item-success');
+    // Función para avanzar al siguiente paso del tutorial
+    const avanzarPaso = () => {
+        if (pasoActual < 5) {
+            setPasoActual(pasoActual + 1);
+        }
+    };
+
+    // Función para retroceder al paso anterior del tutorial
+    const retrocederPaso = () => {
+        if (pasoActual > 0) {
+            setPasoActual(pasoActual - 1);
+        }
+    };
+
+    // Componente para mostrar el progreso del curso
+    const ProgressBar = () => {
+        const progreso = (pasoActual / 5) * 100; // Calcula el progreso actual
+        return (
+            <div className="progress-bar" style={{ width: `${progreso}%` }}>
+                {progreso.toFixed(2)}%
+            </div>
+        );
+    };
+
+    // Mapea el número del paso al componente correspondiente
+    const componentePaso = {
+        0: <Paso1 avanzar={avanzarPaso} />,
+        1: <Paso2 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
+        2: <Paso3 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
+        3: <Paso4 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
+        4: <Paso5 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
+        5: <Paso6 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
+
+    };
+
+    // Verificar si el curso está completo
+    useEffect(() => {
+        if (pasoActual === 5) {
+            setCursoCompleto(true);
         } else {
-            listItem.classList.remove('list-group-item-success');
+            setCursoCompleto(false);
         }
+    }, [pasoActual]);
 
-        // Calcular el progreso y actualizar la barra de progreso
-        var totalItems = listaEstudio.getElementsByTagName('li').length;
-        var itemsCompletados = listaEstudio.querySelectorAll('.list-group-item-success').length;
-        var progreso = (itemsCompletados / totalItems) * 100;
-        progressBar.querySelector('.progress-bar').style.width = progreso + '%';
-        progressBar.querySelector('.progress-bar').innerText = progreso.toFixed(2) + '% completado';
-
-        // Mostrar mensaje de felicitaciones si todos los elementos están marcados
-        if (itemsCompletados === totalItems) {
-            alert('¡Felicidades! Has completado el curso exitosamente, ya puedes descargar tu Certificado.');
+    // Mostrar la alerta al completar el curso (únicamente en el último paso)
+    useEffect(() => {
+        if (cursoCompleto) {
+            alert('¡Felicidades! Has completado el curso.');
         }
-    };
-
-    const avanzarItem = () => {
-        // Encuentra el elemento actualmente marcado
-        var listaEstudio = document.getElementById('listaEstudio');
-        var items = listaEstudio.getElementsByClassName('list-group-item');
-        var itemMarcado;
-
-        for (var i = 0; i < items.length; i++) {
-            if (items[i].querySelector('input').checked) {
-                itemMarcado = items[i];
-                break;
-            }
-        }
-
-        // Encuentra el siguiente elemento y marca su checkbox
-        if (itemMarcado) {
-            var siguienteItem = itemMarcado.nextElementSibling;
-            if (siguienteItem) {
-                siguienteItem.querySelector('input').click();
-            } else {
-                // Si no hay un siguiente elemento, podrías reiniciar desde el principio o mostrar un mensaje
-                console.log('Ya has marcado todos los elementos.');
-            }
-        }
-
-        // Marcar automáticamente el checkbox de "Introducción a Python"
-        var checkboxIntroduccion = document.getElementById('item1');
-        if (checkboxIntroduccion) {
-            checkboxIntroduccion.checked = true;
-            marcarItem(1); // Llamar a la función para actualizar el progreso
-        }
-    };
+    }, [cursoCompleto]);
 
     return (
-        <>
-            <div className="container-cursito">
-                <h1>¡Bienvenido a tu curso!</h1>
-                <iframe width="560" height="500" src="https://www.youtube.com/embed/UzAHubCqyHo?si=qchVP1dZlXMVKiw1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            {/* Lista de estudio PPT */}
-            <div className="container-cursito">
-                <h2>Creación presentación PowerPoint</h2>
-
-                <ul id="listaEstudio" className="list-group">
-                    <li className="list-group-item d-flex justify-content-between align-items-center" data-id="1">
-                        ¿Qué es PowerPoint?
-                        <input type="checkbox" className="form-check-input" id="item1" onClick={() => marcarItem(1)} />
-                    </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-center" data-id="2">
-                        Crear una presentación
-                        <input type="checkbox" className="form-check-input" id="item2" onClick={() => marcarItem(2)} />
-                    </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-center" data-id="3">
-                       Agregar una diapositiva
-                        <input type="checkbox" className="form-check-input" id="item3" onClick={() => marcarItem(3)} />
-                    </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-center" data-id="4">
-                        Agregar texto y darle formato
-                        <input type="checkbox" className="form-check-input" id="item4" onClick={() => marcarItem(4)} />
-                    </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-center" data-id="5">
-                       Agregar imágenes y estilos
-                        <input type="checkbox" className="form-check-input" id="item5" onClick={() => marcarItem(5)} />
-                    </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-center" data-id="6">
-                        Proyecto Final
-                        <input type="checkbox" className="form-check-input" id="item6" onClick={() => marcarItem(6)} />
-                    </li>
-                </ul>
-                <a className="btn-certificado" target="_blank" href="../Certificado/CertificadoEjemplo.pdf" download="Certificado">
-                    Descargar Certificado
-                </a>
-
-                {/* Barra de progreso */}
-                <div id="progressBar" className="progress">
-                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: '0%' }} aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <div className="curso-container">
+            <h1>Como crear tu CV</h1>
+            <div className="curso-content">
+                {componentePaso[pasoActual]}
+                <div className="progress">
+                    <ProgressBar />
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
