@@ -20,6 +20,7 @@ import Estudiantes from "../Views/Estudiantes";
 import CursoEstudiante from "../Views/CursoEstudiante";
 import BusquedaEstudiante from "../Views/BusquedaEstudiante";
 import DiplomaEstudiantes from "../Views/DiplomaEstudiantes";
+import EditarEstudiante from "../Views/EditarEstudiante";
 
 
 
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
   { path: "/CursoEstudiante", element: <CursoEstudiante/> },
   { path: "/BusquedaEstudiante", element: <BusquedaEstudiante/> },
   { path: "/DiplomaEstudiantes", element: <DiplomaEstudiantes/> },
+  { path: "/EditarEstudiante", element: <EditarEstudiante/> },
 
   // { path: "/AdmiPanelCurso", element: <AdmiPanelCurso /> },
   

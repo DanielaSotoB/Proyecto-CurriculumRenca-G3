@@ -60,7 +60,7 @@ const NavbarEstudiante = () => {
             }
             id="nav-dropdown"
           >
-            <NavDropdown.Item href="#mi-perfil">Mi Perfil</NavDropdown.Item>
+            <NavDropdown.Item href="/EditarEstudiante">Mi Perfil</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#cerrar-sesion">Cerrar Sesión</NavDropdown.Item>
           </NavDropdown>

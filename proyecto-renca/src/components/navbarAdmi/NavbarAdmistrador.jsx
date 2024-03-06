@@ -19,7 +19,7 @@ const NavbarAdministrador = () => {
     };
   return (
     <Navbar bg={darkMode ? 'dark' : 'light'} expand="lg" variant={darkMode ? 'dark' : 'light'}>
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/AdmiPanelView">
         <a href="">
           <img
             src="../img/logo-renca.png"
@@ -33,10 +33,9 @@ const NavbarAdministrador = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#home">Cursos</Nav.Link>
-          <Nav.Link href="#link">Estudiantes</Nav.Link>
+          <Nav.Link href="/AdmiPanelUsuarios">Estudiantes</Nav.Link>
           <NavDropdown title="Más" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Pagina principal</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Pagina Estudiantes</NavDropdown.Item>
+            <NavDropdown.Item href="./">Pagina principal</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav className="ml-auto">

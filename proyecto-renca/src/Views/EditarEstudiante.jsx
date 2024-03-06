@@ -1,17 +1,17 @@
 // import React from "react";
 import NavbarEstudiantes from "../components/NavbarEstudiante/NavbarEstudiantes";
 import Footer from "../components/Footer/Footer";
-import MiCurso from "../components/MiCurso1/MiCurso";
+import EstudianteEditar from "../components/Estudiantes/EstudianteEditar";
 
 
-const CursoEstudiante = () => {
+const EditarEstudiante = () => {
     return (
     <>
         <NavbarEstudiantes />
-        <MiCurso/>
+        <EstudianteEditar/>
         <Footer />
     </>
     );
 }
 
-export default CursoEstudiante;
+export default EditarEstudiante;

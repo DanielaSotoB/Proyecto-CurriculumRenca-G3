@@ -45,7 +45,7 @@ const LoginRegistro = () => {
             }
             
             // Redirigir al usuario a CursosDispo después del inicio de sesión o registro exitoso
-            navigate('/CursosDispo');
+            navigate('/Estudiantes');
 
         } catch (error) {
             console.error('ERROR:', error);
