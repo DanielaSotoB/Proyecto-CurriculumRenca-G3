@@ -1,32 +1,53 @@
-import './Contacto.css'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+import './Contacto.css';
 
 const Contacto = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_zw3y9i9', 'template_syiwr2c', form.current, {
+        publicKey: 'i0u4q2i1TJplyG59G',
+      })
+      .then(
+        () => {
+          alert('¡Correo enviado con éxito!');
+          form.current.reset(); // Restablecer el formulario
+        },
+        (error) => {
+          alert('Error al enviar el correo. Por favor, inténtelo de nuevo.');
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
-    <form className="form2" onSubmit={handleSubmit}>
+    <body id="cuerpo">
+      <form id="formulario" ref={form} onSubmit={sendEmail}>
+        <h2>Contacto</h2>
+        <div className="input-group1">
+          <label htmlFor="name">Nombre</label>
+          <input className="input1" type="text" name="user_name" id="name" placeholder="Nombre" />
 
-      <h2>Contacto</h2>
-    
-      <div className="input-group2">
-        <label htmlFor="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="Nombre" required />
+          <label htmlFor="email">Email</label>
+          <input className="input1" type="text" name="user_email" id="email" placeholder="Email" />
 
-        <label htmlFor="phone">Teléfono</label>
-        <input type="tel" name="phone" id="phone" placeholder="Teléfono" />
+          <label htmlFor="message">Mensaje</label>
+          <textarea className='textarea1' name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
 
-        <label htmlFor="email">Correo Electrónico</label>
-        <input type="email" name="email" id="email" placeholder="Correo Electrónico" required />
+          <div className="form-text1">
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+          </div>
 
-        <label htmlFor="message">Mensaje</label>
-        <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje" required></textarea>
-
-        <input className="btn2" type="submit" value="Enviar" />
-      </div>
-    </form>
+          <input className="btn-contact" type="submit" value="Enviar" />
+        </div>
+      </form>
+    </body>
   );
 };
 

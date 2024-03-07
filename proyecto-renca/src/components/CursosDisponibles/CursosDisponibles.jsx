@@ -58,6 +58,29 @@ const CursosDisponibles = () => {
                     </div>
                 ))}
             </div>
+              {/* TARJETA 5 */}
+              <div className="col-tarjeta">
+                    <div className="card">
+                        <img className="card-img-top" src="https://edteam-media.s3.amazonaws.com/courses/original/506ead68-9257-44c7-8ff8-2d0c320b99dd.jpg" alt="Curso Básico Excel" />
+                        <div className="card-body">
+                            <h1 className="h5 card-title">Curso Básico Excel</h1>
+                            <p className="card-text">Duración: 7 horas</p>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
+                        </div>
+                    </div>
+                </div>
+                
+                           {/* TARJETA 4 */}
+                           <div className="col-tarjeta">
+                    <div className="card">
+                        <img className="card-img-top" src="https://edteam-media.s3.amazonaws.com/courses/big/152be9d3-4704-4639-b399-203a76a286c5.jpg" alt="Curso Básico Java" />
+                        <div className="card-body">
+                            <h1 className="h5 card-title">Curso Básico Java</h1>
+                            <p className="card-text">Duración: 7 horas</p>
+                            <a href="/CursosDispo" className="btn btn-primary">Ir al curso</a>
+                        </div>
+                    </div>
+                </div>
         </div>
     );
 };
