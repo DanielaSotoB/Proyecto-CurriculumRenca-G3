@@ -1,114 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import { Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { IoNotificationsOutline, IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
+import './NavbarAdministrador.css';
 
-const NavbarAdmistrador = () => {
-    const [modoOscuro, setModoOscuro] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
-
-    const toggleModoOscuro = () => {
-        setModoOscuro(!modoOscuro);
-    };
+const NavbarAdministrador = () => {
+    const [darkMode, setDarkMode] = React.useState(false);
 
     useEffect(() => {
-        if (modoOscuro) {
+        if (darkMode) {
             document.body.classList.add('dark-mode');
         } else {
             document.body.classList.remove('dark-mode');
         }
-    }, [modoOscuro]);
+    }, [darkMode]);
 
-    const handleLogoutClick = () => {
-        // Lógica para manejar el clic en "Cerrar sesión"
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
     };
 
     return (
-        <>
-            <header className={`header--featured row mt-4 mb-1 mx-4 d-none d-md-flex ${modoOscuro ? 'dark-mode' : ''}`}>
-                <div className="col-4 col-lg-6">
-                    <div className="row">
-                        <div className="col-7 col-lg-7 col-xl-4">
-                            <a href="https://renca.cl/">
-                                <img src="../img/logo-renca.png" style={{ maxHeight: '60px' }} alt="Ilustre Municipalidad de Renca" />
-                            </a>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div className="col-8 col-lg-6 justify-content-end">
-                    <div className="row pb-2 text-end">
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col text-end">
-                                    <div className="col text-end" onClick={toggleModoOscuro}>
-                                        <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-mask" viewBox="0 0 16 16">
-                                            <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546M4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
-                                        </svg> 
-                                    </div>
-                                </div>
+        <Navbar bg={darkMode ? 'dark' : 'light'} expand="lg" variant={darkMode ? 'dark' : 'light'}>
+            <Navbar.Brand href="/AdmiPanelView">
+                <a href="">
+                    <img
+                        src="../img/logo-renca.png"
+                        style={{ maxHeight: '60px' }}
+                        alt="Ilustre Municipalidad de Renca"
+                    />
+                </a>
+                Administrador de Cursos
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                    <Nav.Link href="#home">Cursos</Nav.Link>
+                    <Nav.Link href="/AdmiPanelUsuarios">Estudiantes</Nav.Link>
+                    <Nav.Link href="/NotiCreadas">Notificaciones</Nav.Link>
+                    <NavDropdown title="Más" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="./">Pagina principal</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                <Nav className="ml-auto">
+                    <Nav.Link href="#notifications">
+                        <IoNotificationsOutline size={24} />
+                    </Nav.Link>
+                    <Nav.Link href="#dark-mode" onClick={toggleDarkMode}>
+                        {darkMode ? <IoSunnyOutline size={24} /> : <IoMoonOutline size={24} />}
+                    </Nav.Link>
+                    <NavDropdown
+                        alignRight
+                        title={
+                            <div className="d-flex align-items-center">
+                                <img
+                                    src="https://media.licdn.com/dms/image/D5603AQGIS8_oH390Wg/profile-displayphoto-shrink_400_400/0/1705586748936?e=1715212800&v=beta&t=kbOgtG-g9e2FvHq7eRy2EuVgD7xMe_lPnB6Gfh7k2ro"
+                                    style={{ width: '30px', height: '30px', borderRadius: '50%', marginRight: '8px' }}
+                                    alt="Perfil de Usuario"
+                                />
+                                Admi - Janis Aravena
                             </div>
-                        </div>
-                        <div className="col-6 text-end">
-                            <form className="navbar-form" role="search" action="#" method="get">
-                                <div className="form-group">
-                                    <div className="input-group">
-                                        <input type="text" name="s" id="search" placeholder="¿Qué deseas aprender?" className="form-control" style={{ fontSize: '80%', borderRadius: '5px' }} />
-                                        <button type="submit" className="btn btn-outline-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <nav id="nav1" className="navbar navbar-expand-lg">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="/">Currículum Renca</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/AdmiPanelView">PANEL ADMINISTRADOR</a>
-                            </li>
-                            <li className="nav-item dropdown">      
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Otros
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/CursosDispo">Cursos Disponible</a></li>
-                                    <li><a className="dropdown-item" href="/InformacionCursos">Información Cursos</a></li>
-                                    <li><a className="dropdown-item" href="/PreguntasFrecuentes">Preguntas Frecuentes</a></li>
-                                    <li><a className="dropdown-item" href="/PreguntasFrecuentes">Contacto</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="/">Cerrar Sesión</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <a className="nav-link active" aria-current="page" href="/AdmiPanelView">ADMINISTRADOR</a>
-                        <Dropdown show={showMenu} onMouseEnter={() => setShowMenu(true)} onMouseLeave={() => setShowMenu(false)}>
-                            <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16" style={{ cursor: 'pointer' }}>
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                    <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                                </svg>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item as={Link} to="/profile">Mi perfil</Dropdown.Item>
-                                <Dropdown.Item onClick={handleLogoutClick}>Cerrar sesión</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </div>
-                </div>
-            </nav>
-        </>
+                        }
+                        id="nav-dropdown"
+                    >
+                        <NavDropdown.Item href="#action/3.5">Perfil</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.7">Cerrar Sesión</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
-}
+};
 
-export default NavbarAdmistrador;
+export default NavbarAdministrador;

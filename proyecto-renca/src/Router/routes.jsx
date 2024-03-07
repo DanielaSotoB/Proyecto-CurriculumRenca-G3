@@ -16,6 +16,13 @@ import AdmiPanelCurso from "../Views/AdmiPanelCurso";
 import NavBarUser from "../Views/NavBarUser";
 import AdmiPanelUsuarios from "../Views/AdmiPanelUsuarios";
 import PerfilUser from "../Views/PerfilUser";
+import Estudiantes from "../Views/Estudiantes";
+import CursoEstudiante from "../Views/CursoEstudiante";
+import BusquedaEstudiante from "../Views/BusquedaEstudiante";
+import DiplomaEstudiantes from "../Views/DiplomaEstudiantes";
+import EditarEstudiante from "../Views/EditarEstudiante";
+import Notificaciones from "../Views/Notificaciones";
+import NotiCreadas from "../Views/NotiCreadas";
 
 
 
@@ -36,6 +43,13 @@ const router = createBrowserRouter([
   { path: "/NavBarUser", element: <NavBarUser /> },
   { path: "/AdmiPanelUsuarios", element: <AdmiPanelUsuarios/> },
   { path: "/PerfilUser", element: <PerfilUser/> },
+  { path: "/Estudiantes", element: <Estudiantes/> },
+  { path: "/CursoEstudiante", element: <CursoEstudiante/> },
+  { path: "/BusquedaEstudiante", element: <BusquedaEstudiante/> },
+  { path: "/DiplomaEstudiantes", element: <DiplomaEstudiantes/> },
+  { path: "/EditarEstudiante", element: <EditarEstudiante/> },
+  { path: "/Notificaciones", element: <Notificaciones/> },
+  { path: "/NotiCreadas", element: <NotiCreadas/> },
 
   // { path: "/AdmiPanelCurso", element: <AdmiPanelCurso /> },
   
@@ -43,6 +57,9 @@ const router = createBrowserRouter([
 
   // Utiliza ProtectedRoute para la ruta de Contactopag
   { path: "/Contactopag", element: <ProtectedRoute path="/Contactopag" element={<ContactoPag />} /> },
+
+
+
 ]);
 
 export default router;
