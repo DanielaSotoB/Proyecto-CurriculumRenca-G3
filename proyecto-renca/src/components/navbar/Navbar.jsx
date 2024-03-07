@@ -23,8 +23,10 @@ const Navbar = () => {
     // Función para aumentar el tamaño del texto
     const aumentarTexto = () => {
         document.documentElement.style.fontSize = 'larger';
+
     };
 
+    
     return (
         <>
             <header className={`header--featured row mt-4 mb-1 mx-4 d-none d-md-flex ${darkMode ? 'dark-mode' : ''}`}>
@@ -42,9 +44,9 @@ const Navbar = () => {
                         <div className="col-3">
                             <div className="row">
                                 <div className="col text-end">
-                                    {/* <button className="btn" onClick={aumentarTexto}>
+                                     {/* <button className="btn" onClick={aumentarTexto}>
                                         <IoResize size={24} />
-                                    </button> */}
+                                    </button>  */}
                                 </div>
                             </div>
                         </div>

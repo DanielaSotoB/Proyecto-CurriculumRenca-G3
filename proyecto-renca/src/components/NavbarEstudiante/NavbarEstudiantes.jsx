@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { IoNotificationsOutline, IoBookOutline, IoSearchOutline, IoPersonCircleOutline, IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
+import {
+  IoNotificationsOutline,
+  IoBookOutline,
+  IoSearchOutline,
+  IoPersonCircleOutline,
+  IoMoonOutline,
+  IoSunnyOutline
+} from 'react-icons/io5';
 import './NavbarEstudiante.css';
 
 const NavbarEstudiante = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [showNotificationCount, setShowNotificationCount] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
@@ -14,14 +22,17 @@ const NavbarEstudiante = () => {
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  const handleNotificationClick = () => {
+    setShowNotificationCount(false);
+    setTimeout(() => setShowNotificationCount(true), 240000); // Oculta el contador durante 4 minutos
   };
 
   return (
     <Navbar bg={darkMode ? 'dark' : 'light'} expand="lg" variant={darkMode ? 'dark' : 'light'}>
       <Navbar.Brand href="/Estudiantes">
-      <a href="">
+        <a href="">
           <img
             src="../img/logo-renca.png"
             style={{ maxHeight: '60px' }}
@@ -47,6 +58,10 @@ const NavbarEstudiante = () => {
           </Nav.Link>
         </Nav>
         <Nav className="ml-auto">
+          <Nav.Link href="/Notificaciones" onClick={handleNotificationClick}>
+            {showNotificationCount && <span className="notification-count">1</span>}
+            <IoNotificationsOutline size={24} />
+          </Nav.Link>
           <Nav.Link href="#dark-mode" onClick={toggleDarkMode}>
             {darkMode ? <IoSunnyOutline size={24} /> : <IoMoonOutline size={24} />}
           </Nav.Link>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './MiCurso.css';
+import Swal from 'sweetalert2'; // Importar SweetAlert2
 
 // Módulo para el primer paso del tutorial
 function Paso1({ avanzar }) {
@@ -56,7 +57,6 @@ function Paso4({ avanzar, retroceder }) {
     );
 }
 
-
 // Módulo para el quinto paso del tutorial
 function Paso5({ avanzar, retroceder }) {
     return (
@@ -71,7 +71,6 @@ function Paso5({ avanzar, retroceder }) {
     );
 }
 
-
 // Módulo para el sexto paso del tutorial
 function Paso6({ retroceder }) {
     return (
@@ -81,7 +80,7 @@ function Paso6({ retroceder }) {
                 <img src="../img/CV.png" alt="CV" />
             </div>
             <button onClick={retroceder}>Anterior</button>
-                    </div>
+        </div>
     );
 }
 
@@ -121,8 +120,7 @@ function MiCurso() {
         2: <Paso3 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
         3: <Paso4 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
         4: <Paso5 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
-        5: <Paso6 avanzar={avanzarPaso} retroceder={retrocederPaso} />,
-
+        5: <Paso6 retroceder={retrocederPaso} />,
     };
 
     // Verificar si el curso está completo
@@ -137,7 +135,12 @@ function MiCurso() {
     // Mostrar la alerta al completar el curso (únicamente en el último paso)
     useEffect(() => {
         if (cursoCompleto) {
-            alert('¡Felicidades! Has completado el curso.');
+            Swal.fire({
+                title: '¡Felicidades!',
+                text: 'Has completado el curso. Tu diploma estará disponible en 24 horas y podrás descargarlo desde la opción "Mis diplomas".',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
         }
     }, [cursoCompleto]);
 

@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './adminpanel.css';
-import 'react-calendar/dist/Calendar.css';
-import Calendar from 'react-calendar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faBookOpen, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 const AdminPanel = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
   const redirectToPage = (url) => {
     window.open(url, '_blank');
   };
@@ -25,12 +17,7 @@ const AdminPanel = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-3 sidebar bg-light">
-          <div className="calendar-container">
-            <h5>Calendario</h5>
-            <Calendar onChange={handleDateChange} value={selectedDate} />
-          </div>
-        </div>
+        
         <div className="col-md-9 content">
           <div className="container mt-4">
             <div className="card">

@@ -21,6 +21,8 @@ import CursoEstudiante from "../Views/CursoEstudiante";
 import BusquedaEstudiante from "../Views/BusquedaEstudiante";
 import DiplomaEstudiantes from "../Views/DiplomaEstudiantes";
 import EditarEstudiante from "../Views/EditarEstudiante";
+import Notificaciones from "../Views/Notificaciones";
+import NotiCreadas from "../Views/NotiCreadas";
 
 
 
@@ -46,6 +48,8 @@ const router = createBrowserRouter([
   { path: "/BusquedaEstudiante", element: <BusquedaEstudiante/> },
   { path: "/DiplomaEstudiantes", element: <DiplomaEstudiantes/> },
   { path: "/EditarEstudiante", element: <EditarEstudiante/> },
+  { path: "/Notificaciones", element: <Notificaciones/> },
+  { path: "/NotiCreadas", element: <NotiCreadas/> },
 
   // { path: "/AdmiPanelCurso", element: <AdmiPanelCurso /> },
   
@@ -53,6 +57,9 @@ const router = createBrowserRouter([
 
   // Utiliza ProtectedRoute para la ruta de Contactopag
   { path: "/Contactopag", element: <ProtectedRoute path="/Contactopag" element={<ContactoPag />} /> },
+
+
+
 ]);
 
 export default router;

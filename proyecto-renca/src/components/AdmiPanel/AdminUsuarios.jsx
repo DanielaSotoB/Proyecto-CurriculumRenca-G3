@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 import './adminuser.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,14 +22,31 @@ const AdminUsuarios = () => {
     fetchUsuarios();
   }, []);
 
-  const handleDeleteUser = async (id) => {
-    try {
-      await axios.delete(`http://localhost:3001/api/usuarios/borrar-usuario/${id}`);
-      // Actualizar lista de usuarios excluyendo el usuario eliminado
-      setUsuarios(prevUsers => prevUsers.filter(usuario => usuario._id !== id));
-    } catch (error) {
-      console.error('Error deleting user:', error);
-      setError(`Error al eliminar el usuario con ID ${id}. Por favor, intenta de nuevo más tarde.`);
+  const handleDeleteUser = async (id, nombre) => {
+    const result = await Swal.fire({
+      title: `¿Estás seguro de que deseas eliminar al usuario ${nombre}?`,
+      text: "¡Esta acción no se puede deshacer!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    });
+
+    if (result.isConfirmed) {
+      try {
+        await axios.delete(`http://localhost:3001/api/usuarios/borrar-usuario/${id}`);
+        setUsuarios(prevUsers => prevUsers.filter(usuario => usuario._id !== id));
+        Swal.fire(
+          'Eliminado',
+          `El usuario ${nombre} ha sido eliminado.`,
+          'success'
+        );
+      } catch (error) {
+        console.error('Error deleting user:', error);
+        setError(`Error al eliminar el usuario con ID ${id}. Por favor, intenta de nuevo más tarde.`);
+      }
     }
   };
 
@@ -38,7 +56,7 @@ const AdminUsuarios = () => {
         {/* <input type="text" placeholder="Buscar usuario..." /> */}
       </div>
       {error && <p className="alert alert-danger">{error}</p>}
-      <h1 className="mb-4">Lista de Usuarios</h1>
+      <h1 className="mb-4">Lista de Estudiantes</h1>
       <table className="table">
         <thead>
           <tr>
@@ -54,16 +72,15 @@ const AdminUsuarios = () => {
             <tr key={usuario._id}>
               <td>
                 <div className="usuario">
-                  <img src={usuario.img || '/noavatar.png'} alt="" width={40} height={40} />
                   {usuario.nombre}
                 </div>
               </td>
               <td>{usuario.correo}</td>
-              <td>{usuario.isAdmin ? 'Admin' : 'Cliente'}</td>
-              <td>{usuario.isActive ? 'activo' : 'inactivo'}</td>
+              <td>{usuario.isAdmin ? 'Admin' : 'Estudiante'}</td>
+              <td>{usuario.isActive ? 'Activo' : 'Inactivo'}</td>
               <td>
                 <div className="botones">
-                  <button className="btn btn-danger" onClick={() => handleDeleteUser(usuario._id)}>Eliminar</button>
+                  <button className="btn btn-danger" onClick={() => handleDeleteUser(usuario._id, usuario.nombre)}>Eliminar</button>
                 </div>
               </td>
             </tr>
